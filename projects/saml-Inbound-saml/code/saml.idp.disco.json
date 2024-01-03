@@ -11,7 +11,7 @@
 				"type": "Agama-start-Flow",
 				"position": {
 					"x": 30,
-					"y": 30
+					"y": 28
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -24,21 +24,23 @@
 					"basepath": "",
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "",
+					"timeout": "100",
 					"inputs": "",
 					"configs": "",
 					"flowname": "saml.idp.disco"
 				},
-				"skake": false
+				"skake": true
 			},
 			"position": {
 				"x": 30,
-				"y": 30
+				"y": 28
 			},
 			"positionAbsolute": {
 				"x": 30,
-				"y": 30
-			}
+				"y": 28
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [],
