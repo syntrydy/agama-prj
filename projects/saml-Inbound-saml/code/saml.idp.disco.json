@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
+        "type": "Agama-start-Flow",
+        "displayName": "IDP discovery Flow",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "saml.idp.disco"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
