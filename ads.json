@@ -13,7 +13,9 @@
             "authentication"
         ],
         "noDirectLaunch": [],
-        "configs": {},
+        "configs": {
+            "saml.idp.disco": {}
+        },
         "name": "saml-Inbound-saml"
     }
 }
