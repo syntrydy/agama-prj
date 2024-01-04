@@ -23,15 +23,16 @@
 					"id": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
 					"parentId": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
 					"type": "Agama-rfac-Node",
-					"displayName": "",
+					"displayName": "Get configured IDP",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "",
-					"assignCallbackResult": ""
-				}
+					"idpAuthEndpoint": "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp",
+					"assignCallbackResult": "idpList"
+				},
+				"skake": true
 			},
 			"selected": true,
 			"positionAbsolute": {
