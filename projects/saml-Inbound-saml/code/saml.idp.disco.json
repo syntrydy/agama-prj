@@ -32,7 +32,7 @@
 					"idpAuthEndpoint": "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp",
 					"assignCallbackResult": "idpList"
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
