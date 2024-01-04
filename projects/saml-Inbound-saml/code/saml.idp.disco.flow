@@ -1,4 +1,4 @@
 Flow saml.idp.disco
      Basepath ""
      Timeout 100 seconds
-RFAC __________
+idpList = RFAC https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp
