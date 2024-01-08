@@ -2,7 +2,49 @@
 	"nodes": [
 		{
 			"width": 170,
-			"height": 122,
+			"height": 123,
+			"id": "Agama-rrf-Node-ccbdabf4-f2b7-48d0-b265-2d639d6ad54e",
+			"position": {
+				"x": 473.4336742217333,
+				"y": 126.46606759553487
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-ccbdabf4-f2b7-48d0-b265-2d639d6ad54e",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 473.4336742217333,
+					"y": 126.46606759553487
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-ccbdabf4-f2b7-48d0-b265-2d639d6ad54e",
+					"parentId": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
+					"type": "Agama-rrf-Node",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "saml.idp.dis",
+					"asssignedVariableName": "",
+					"arguments": "idpList"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 473.4336742217333,
+				"y": 126.46606759553487
+			}
+		},
+		{
+			"width": 170,
+			"height": 123,
 			"id": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
 			"position": {
 				"x": 272.4336742217333,
@@ -32,9 +74,9 @@
 					"idpAuthEndpoint": "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp",
 					"assignCallbackResult": "idpList"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 272.4336742217333,
 				"y": 126.46606759553487
@@ -43,7 +85,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 123,
 			"id": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
 			"type": "start",
 			"sourcePosition": "right",
@@ -90,6 +132,23 @@
 			"type": "straight",
 			"source": "Agama-start-Flow-84c0d952-1fc2-42ac-9447-efbc080e0e15",
 			"target": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736-Agama-rrf-Node-ccbdabf4-f2b7-48d0-b265-2d639d6ad54e-6f16167f-828b-4b78-814f-bd9705db4899",
+			"type": "straight",
+			"source": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
+			"target": "Agama-rrf-Node-ccbdabf4-f2b7-48d0-b265-2d639d6ad54e",
 			"label": "",
 			"labelBgPadding": [
 				8,
