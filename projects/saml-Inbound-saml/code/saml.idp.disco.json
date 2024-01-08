@@ -72,10 +72,10 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp",
+					"idpAuthEndpoint": "\"https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp\"",
 					"assignCallbackResult": "idpList"
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -164,8 +164,8 @@
 		}
 	],
 	"viewport": {
-		"x": -578.4750061035156,
-		"y": -429,
-		"zoom": 2
+		"x": 10,
+		"y": 15,
+		"zoom": 1
 	}
 }
