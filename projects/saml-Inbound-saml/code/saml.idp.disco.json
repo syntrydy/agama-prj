@@ -33,9 +33,10 @@
 					"templatePath": "saml.idp.dis",
 					"asssignedVariableName": "",
 					"arguments": "idpList"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 473.4336742217333,
@@ -47,8 +48,8 @@
 			"height": 123,
 			"id": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
 			"position": {
-				"x": 272.4336742217333,
-				"y": 126.46606759553487
+				"x": 275.4336742217333,
+				"y": 125.46606759553487
 			},
 			"type": "rfac",
 			"data": {
@@ -58,8 +59,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 272.4336742217333,
-					"y": 126.46606759553487
+					"x": 275.4336742217333,
+					"y": 125.46606759553487
 				},
 				"agamaData": {
 					"id": "Agama-rfac-Node-6c14a370-1362-4e39-b9b0-2499d42f2736",
@@ -74,12 +75,12 @@
 					"idpAuthEndpoint": "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp",
 					"assignCallbackResult": "idpList"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": 272.4336742217333,
-				"y": 126.46606759553487
+				"x": 275.4336742217333,
+				"y": 125.46606759553487
 			},
 			"dragging": false
 		},
@@ -163,8 +164,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
-		"zoom": 1
+		"x": -578.4750061035156,
+		"y": -429,
+		"zoom": 2
 	}
 }
