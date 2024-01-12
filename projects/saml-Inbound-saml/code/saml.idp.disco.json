@@ -84,8 +84,8 @@
 			"dragging": false
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-3107ab0d-8f51-436a-9c02-b71e9d9a8884",
 			"position": {
 				"x": 475.4336742217333,
@@ -115,7 +115,7 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
