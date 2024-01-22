@@ -3,15 +3,15 @@
 		{
 			"width": 170,
 			"height": 123,
-			"id": "Agama-rfac-Node-fd864614-0aa8-4b8a-9333-f761e0d8a636",
+			"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
 			"position": {
 				"x": 234,
 				"y": 156
 			},
-			"type": "rfac",
+			"type": "call",
 			"data": {
-				"id": "Agama-rfac-Node-fd864614-0aa8-4b8a-9333-f761e0d8a636",
-				"type": "Agama-rfac-Node",
+				"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
+				"type": "Agama-call-Node",
 				"parentId": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
 				"whenCondition": "",
 				"inRepeatBlock": false,
@@ -20,19 +20,23 @@
 					"y": 156
 				},
 				"agamaData": {
-					"id": "Agama-rfac-Node-fd864614-0aa8-4b8a-9333-f761e0d8a636",
+					"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
 					"parentId": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
-					"type": "Agama-rfac-Node",
+					"type": "Agama-call-Node",
 					"displayName": "",
 					"hasComment": true,
 					"comment": "",
+					"javaClassName": "",
+					"javaMethodName": "getIdpDetails",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "",
-					"assignCallbackResult": ""
-				},
-				"skake": true
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "idList"
+				}
 			},
 			"selected": true,
 			"dragging": false,
@@ -86,10 +90,10 @@
 	],
 	"edges": [
 		{
-			"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a-Agama-rfac-Node-fd864614-0aa8-4b8a-9333-f761e0d8a636-3763de42-fba4-4238-9a3b-804be930dc36",
+			"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a-Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0-ce765627-7a96-466a-833b-628f0b32df2e",
 			"type": "straight",
 			"source": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
-			"target": "Agama-rfac-Node-fd864614-0aa8-4b8a-9333-f761e0d8a636",
+			"target": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
 			"label": "",
 			"labelBgPadding": [
 				8,
@@ -105,7 +109,7 @@
 	],
 	"viewport": {
 		"x": 10,
-		"y": 13,
+		"y": 15,
 		"zoom": 1
 	}
 }
