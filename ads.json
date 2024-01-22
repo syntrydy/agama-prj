@@ -15,7 +15,8 @@
         "noDirectLaunch": [],
         "configs": {
             "saml.idp.disco": {},
-            "": {}
+            "": {},
+            "agama.saml": {}
         },
         "name": "saml-Inbound-saml"
     }
