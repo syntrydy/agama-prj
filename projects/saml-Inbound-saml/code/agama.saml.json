@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
+        "type": "Agama-start-Flow",
+        "displayName": "Agama SAML IDP project",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "agama.saml"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
