@@ -1,3 +1,3 @@
 Flow agama.saml
      Basepath ""
-RFAC __________
+idList = Call __________ getIdpDetails 
