@@ -31,7 +31,8 @@
 					"nodeIcon": "ic:baseline-insert-link",
 					"idpAuthEndpoint": "",
 					"assignCallbackResult": ""
-				}
+				},
+				"skake": true
 			},
 			"selected": true,
 			"dragging": false,
