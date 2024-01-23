@@ -36,7 +36,8 @@
 					"arguments": "tokenUrl",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "SamlService"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -46,8 +47,8 @@
 			}
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
 			"position": {
 				"x": 234,
@@ -73,12 +74,13 @@
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "kcConf.serverUrl+\"-\"+kcConf.realm",
+					"logMessage": "Calling SAML service",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
@@ -120,7 +122,7 @@
 				"x": 34,
 				"y": 155
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 34,
 				"y": 155
