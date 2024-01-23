@@ -4,4 +4,4 @@ Flow agama.saml
      Configs kcConf
 Log "@info " Calling SAML service
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl tokenUrl clientId clientSecret grantType scope username password
-Call __________#__________ 
+idpMap = Call #samlService getAllIdp 
