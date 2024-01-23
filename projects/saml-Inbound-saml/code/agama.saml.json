@@ -6,7 +6,7 @@
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
 				"x": 634,
-				"y": 155
+				"y": 154
 			},
 			"type": "call",
 			"data": {
@@ -17,7 +17,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": 634,
-					"y": 155
+					"y": 154
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -27,20 +27,24 @@
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "getAllIdp",
+					"javaVariableName": "#samlService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
+					"callType": "Call method on instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"arguments": [],
-					"nodeIcon": "material-symbols:code"
-				}
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "idpMap"
+				},
+				"skake": true
 			},
 			"positionAbsolute": {
 				"x": 634,
-				"y": 155
-			}
+				"y": 154
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"width": 170,
@@ -90,7 +94,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 434,
