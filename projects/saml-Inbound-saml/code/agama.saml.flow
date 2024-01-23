@@ -2,5 +2,5 @@ Flow agama.saml
      Basepath ""
      Timeout 500 seconds
      Configs kcConf
-Log "@info " kcConf.serverUrl+"-"+kcConf.realm
+Log "@info " Calling SAML service
 SamlService = Call org.gluu.agama.saml.service.SamlService#new tokenUrl
