@@ -1,6 +1,0 @@
-Flow saml.idp.disco
-     Basepath ""
-     Timeout 100 seconds
-idpList = RFAC "https://pujavs-real-phoenix.gluu.info/jans-config-api/kc/saml/idp"
-Log "@info After RFAC call to KC for IDP "
-RRF "saml.idp.dis" idpList
