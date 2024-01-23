@@ -29,17 +29,26 @@
 					"javaClassName": "org.gluu.agama.saml.service.SamlService",
 					"javaMethodName": "",
 					"javaVariableName": "",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "ex",
 					"callType": "Create an instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"arguments": "tokenUrl",
+					"arguments": [
+						"serverUrl",
+						"tokenUrl",
+						"clientId",
+						"clientSecret",
+						"grantType",
+						"scope",
+						"username",
+						"password"
+					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "SamlService"
+					"asssignedVariableName": "samlService"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 434,
@@ -47,8 +56,8 @@
 			}
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
 			"position": {
 				"x": 234,
@@ -78,9 +87,9 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
