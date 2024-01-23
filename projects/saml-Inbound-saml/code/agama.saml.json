@@ -3,46 +3,86 @@
 		{
 			"width": 170,
 			"height": 123,
-			"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
+			"id": "Agama-call-Node-e5b21a89-cc03-40d6-9b3a-d9e42b58738d",
 			"position": {
-				"x": 234,
-				"y": 156
+				"x": 434,
+				"y": 155
 			},
 			"type": "call",
 			"data": {
-				"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
+				"id": "Agama-call-Node-e5b21a89-cc03-40d6-9b3a-d9e42b58738d",
 				"type": "Agama-call-Node",
+				"parentId": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 434,
+					"y": 155
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-e5b21a89-cc03-40d6-9b3a-d9e42b58738d",
+					"parentId": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+					"type": "Agama-call-Node",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "org.gluu.agama.saml.service.SamlService",
+					"javaMethodName": "",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Create an instance",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"arguments": "tokenUrl",
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "SamlService"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 434,
+				"y": 155
+			}
+		},
+		{
+			"width": 170,
+			"height": 123,
+			"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+			"position": {
+				"x": 234,
+				"y": 155
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+				"type": "Agama-log-Node",
 				"parentId": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
 					"x": 234,
-					"y": 156
+					"y": 155
 				},
 				"agamaData": {
-					"id": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
+					"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
 					"parentId": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
-					"type": "Agama-call-Node",
+					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
 					"comment": "",
-					"javaClassName": "",
-					"javaMethodName": "getIdpDetails",
-					"javaVariableName": "",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"arguments": [],
-					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "idList"
+					"logMessage": "kcConf.serverUrl+\"-\"+kcConf.realm",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
 				}
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
-				"y": 156
+				"y": 155
 			}
 		},
 		{
@@ -56,7 +96,7 @@
 				"type": "Agama-start-Flow",
 				"position": {
 					"x": 34,
-					"y": 156
+					"y": 155
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -67,33 +107,50 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": "{\n  \"serverUrl\": \"https://pujavs-real-phoenix.gluu.info/kc\",\n  \"realm\": \"jans-api\",\n  \"clientId\": \"jans-api-dd75e63d-34e6-4712-8ce4-8aee08613bcb\",\n  \"clientSecret\": \"6f063545274de16da059\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans-api\",\n  \"password\": \"c13dd453bef8aff33c05\",\n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\",\n  \"idpMetadataImportUrl\":\"/admin/realms/%s/identity-provider/import-config\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "",
+					"timeout": "500",
 					"inputs": "",
-					"configs": "",
+					"configs": "kcConf",
 					"flowname": "agama.saml"
 				},
 				"skake": false
 			},
 			"position": {
 				"x": 34,
-				"y": 156
+				"y": 155
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 34,
-				"y": 156
+				"y": 155
 			},
 			"dragging": false
 		}
 	],
 	"edges": [
 		{
-			"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a-Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0-ce765627-7a96-466a-833b-628f0b32df2e",
+			"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a-Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719-366a732e-2d79-40e6-9aee-87196c3c0aa6",
 			"type": "straight",
 			"source": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
-			"target": "Agama-call-Node-903e6801-4c52-42a6-9c4c-d7b2e5b4fae0",
+			"target": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719-Agama-call-Node-e5b21a89-cc03-40d6-9b3a-d9e42b58738d-7a3b3064-2b83-48aa-8308-0ed59468cf05",
+			"type": "straight",
+			"source": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
+			"target": "Agama-call-Node-e5b21a89-cc03-40d6-9b3a-d9e42b58738d",
 			"label": "",
 			"labelBgPadding": [
 				8,
@@ -109,7 +166,7 @@
 	],
 	"viewport": {
 		"x": 10,
-		"y": 15,
+		"y": 14,
 		"zoom": 1
 	}
 }
