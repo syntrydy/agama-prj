@@ -3,6 +3,47 @@
 		{
 			"width": 170,
 			"height": 123,
+			"id": "finish-82f31ff6-d86b-420b-9c59-8574c5edd6bd",
+			"position": {
+				"x": 1034,
+				"y": 153
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-82f31ff6-d86b-420b-9c59-8574c5edd6bd",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"handles": [],
+				"position": {
+					"x": 1034,
+					"y": 153
+				},
+				"agamaData": {
+					"id": "finish-82f31ff6-d86b-420b-9c59-8574c5edd6bd",
+					"parentId": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1034,
+				"y": 153
+			}
+		},
+		{
+			"width": 170,
+			"height": 123,
 			"id": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
 			"position": {
 				"x": 834,
@@ -40,7 +81,7 @@
 				"x": 834,
 				"y": 153
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -285,6 +326,23 @@
 			"type": "straight",
 			"source": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"target": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665-finish-82f31ff6-d86b-420b-9c59-8574c5edd6bd-328d2bb0-c271-4667-8ac4-66d5852e03e7",
+			"type": "straight",
+			"source": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
+			"target": "finish-82f31ff6-d86b-420b-9c59-8574c5edd6bd",
 			"label": "",
 			"labelBgPadding": [
 				8,
