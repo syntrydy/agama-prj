@@ -1,3 +1,6 @@
 Flow agama.saml
      Basepath ""
-idList = Call __________ getIdpDetails 
+     Timeout 500 seconds
+     Configs kcConf
+Log "@info " kcConf.serverUrl+"-"+kcConf.realm
+SamlService = Call org.gluu.agama.saml.service.SamlService#new tokenUrl
