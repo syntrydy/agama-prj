@@ -30,14 +30,18 @@
 					"inRepeatBlock": false,
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "",
-					"asssignedVariableName": ""
-				}
+					"templatePath": "samlDiscover.ftlh",
+					"asssignedVariableName": "dataMap",
+					"arguments": "idpMap"
+				},
+				"skake": false
 			},
 			"positionAbsolute": {
 				"x": 834,
 				"y": 153
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"width": 170,
@@ -82,7 +86,7 @@
 				"x": 634,
 				"y": 153
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
