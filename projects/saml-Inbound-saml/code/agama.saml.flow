@@ -2,9 +2,10 @@ Flow agama.saml
      Basepath ""
      Timeout 500 seconds
      Configs kcConf
+// Calling SAML service
 Log "@info " Calling SAML service
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl tokenUrl clientId clientSecret grantType scope username password
 idpMap = Call samlService getAllIdp 
 dataMap = RRF "samlDiscover.ftlh" idpMap
-it_evfjt = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_evfjt
+it_lurjh = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_lurjh
