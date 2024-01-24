@@ -4,8 +4,10 @@ Flow agama.saml
      Configs kcConf
 // Calling SAML service
 Log "@info " Calling SAML service
+// Create instance of SamlService
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl tokenUrl clientId clientSecret grantType scope username password
+// Get All IDP Details
 idpMap = Call samlService getAllIdp 
 dataMap = RRF "samlDiscover.ftlh" idpMap
-it_lurjh = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_lurjh
+it_cbgjv = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_cbgjv
