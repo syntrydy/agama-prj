@@ -35,7 +35,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1034,
@@ -211,7 +211,7 @@
 					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Calling SAML service",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "Calling SAML service",
@@ -220,7 +220,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
