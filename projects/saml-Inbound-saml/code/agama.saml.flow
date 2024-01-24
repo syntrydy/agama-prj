@@ -6,5 +6,5 @@ Log "@info " Calling SAML service
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl tokenUrl clientId clientSecret grantType scope username password
 idpMap = Call samlService getAllIdp 
 dataMap = RRF "samlDiscover.ftlh" idpMap
-it_iwwit = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_iwwit
+it_evfjt = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_evfjt
