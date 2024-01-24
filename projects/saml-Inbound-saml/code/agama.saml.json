@@ -110,7 +110,7 @@
 					"type": "Agama-call-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Get All IDP Details",
 					"javaClassName": "",
 					"javaMethodName": "getAllIdp",
 					"javaVariableName": "samlService",
@@ -128,7 +128,7 @@
 				"x": 634,
 				"y": 153
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -156,7 +156,7 @@
 					"type": "Agama-call-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Create instance of SamlService",
 					"javaClassName": "org.gluu.agama.saml.service.SamlService",
 					"javaMethodName": "",
 					"javaVariableName": "",
@@ -220,7 +220,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
