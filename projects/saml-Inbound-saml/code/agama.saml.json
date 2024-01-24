@@ -27,7 +27,7 @@
 					"hasSuccess": false,
 					"hasFailure": false,
 					"hasComment": true,
-					"comment": "",
+					"comment": "Finish SAML",
 					"flowfilename": "",
 					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
 					"finishMode": "withSuccess",
@@ -35,7 +35,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1034,
@@ -67,14 +67,16 @@
 					"type": "Agama-rrf-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Display SAML Discovery Page",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "samlDiscover.ftlh",
 					"asssignedVariableName": "dataMap",
-					"arguments": "idpMap"
+					"arguments": [
+						"idpMap"
+					]
 				},
 				"skake": false
 			},
@@ -128,7 +130,7 @@
 				"x": 634,
 				"y": 153
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
