@@ -8,8 +8,9 @@ Log "@info " Calling SAML service
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl tokenUrl clientId clientSecret grantType scope username password
 // Get All IDP Details
 idpMap = Call samlService getAllIdp 
+Log "@info " idpMap
 // Display SAML Discovery Page
 dataMap = RRF "samlDiscover.ftlh" idpMap
 // Finish SAML
-it_cmamg = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_cmamg
+it_qjaaf = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_qjaaf
