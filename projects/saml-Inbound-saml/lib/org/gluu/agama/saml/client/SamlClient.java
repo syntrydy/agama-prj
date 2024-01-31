@@ -64,12 +64,15 @@ class SamlClient {
 
         String token = null;
         if (response != null) {
-            logger.trace(
+            logger.info(
                     "Response for Access Token -  response.getStatus():{}, response.getStatusInfo():{}, response.getEntity().getClass():{}",
                     response.getStatus(), response.getStatusInfo(), response.getEntity().getClass());
             String entity = response.readEntity(String.class);
+            
+            logger.info(" entity:{}",entity);
             if (response.getStatusInfo().equals(Status.OK)) {
                 token = Jackson.getElement(entity, ACCESS_TOKEN);
+                logger.info(" token:{}",token);
             } else {
                 throw new WebApplicationException(
                         "Error while Access Token is " + response.getStatusInfo() + " - " + entity, response);
@@ -80,7 +83,7 @@ class SamlClient {
     }
 
     public String getAllIdp(String idpUrl, String token) {
-        logger.info(" All IDP - idpUrl:{}", idpUrl);
+        logger.info(" All IDP - idpUrl:{}, token:{}", idpUrl, token);
 
         Builder client = getClientBuilder(idpUrl);
         client.header(CONTENT_TYPE, MediaType.APPLICATION_JSON);
@@ -90,14 +93,15 @@ class SamlClient {
 
         String identityProviderJsonList = null;
         if (response != null) {
-            logger.trace(
+            logger.info(
                     "Fetch all IDP response.getStatus():{}, response.getStatusInfo():{}, response.getEntity().getClass():{}",
                     response.getStatus(), response.getStatusInfo(), response.getEntity().getClass());
             String entity = response.readEntity(String.class);
-            logger.trace("Get All IDP entity:{}", entity);
+            logger.info("Get All IDP entity:{}", entity);
             if (response.getStatusInfo().equals(Status.OK)) {
 
                 identityProviderJsonList = entity;
+                logger.info("All IDP - identityProviderJsonList:{}", identityProviderJsonList);
             } else {
                 throw new WebApplicationException(
                         "Error while fetching All IDP is " + response.getStatusInfo() + " - " + entity, response);
