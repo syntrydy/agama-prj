@@ -121,19 +121,7 @@
 					"callType": "Create an instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"arguments": [
-						"serverUrl",
-						"realm",
-						"clientId",
-						"clientSecret",
-						"grantType",
-						"scope",
-						"username",
-						"password",
-						"spMetadataUrl",
-						"tokenUrl",
-						"idpUrl"
-					],
+					"arguments": "kcConf.serverUrl, kcConf.realm, kcConf.clientId, kcConf.clientSecret, kcConf.grantType, kcConf.scope, kcConf.username, kcConf.password, kcConf.spMetadataUrl, kcConf.tokenUrl, kcConf.idpUrl",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "samlService"
 				},
@@ -180,7 +168,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
@@ -197,8 +185,8 @@
 				"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
 				"type": "Agama-start-Flow",
 				"position": {
-					"x": 35,
-					"y": 159
+					"x": 36,
+					"y": 157
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -219,13 +207,13 @@
 				"skake": false
 			},
 			"position": {
-				"x": 35,
-				"y": 159
+				"x": 36,
+				"y": 157
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 35,
-				"y": 159
+				"x": 36,
+				"y": 157
 			},
 			"dragging": false
 		},
@@ -275,8 +263,8 @@
 			"height": 123,
 			"id": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
 			"position": {
-				"x": 1057,
-				"y": 162
+				"x": 1061,
+				"y": 148
 			},
 			"type": "rrf",
 			"data": {
@@ -286,8 +274,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 1057,
-					"y": 162
+					"x": 1061,
+					"y": 148
 				},
 				"agamaData": {
 					"id": "Agama-rrf-Node-f8adc250-6f98-4e98-b113-2987cb9c3665",
@@ -312,10 +300,10 @@
 				"skake": false
 			},
 			"positionAbsolute": {
-				"x": 1057,
-				"y": 162
+				"x": 1061,
+				"y": 148
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
