@@ -1,5 +1,7 @@
 package org.gluu.agama.saml.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,8 +17,9 @@ import org.slf4j.LoggerFactory;
 
 import org.gluu.agama.saml.client.SamlClient;
 import org.gluu.agama.saml.util.SamlUtil;
+import org.gluu.agama.saml.util.Jackson;
 
-class SamlService {
+public class SamlService {
 
     private static final Logger logger = LoggerFactory.getLogger(SamlService.class);
 
@@ -53,20 +56,21 @@ class SamlService {
         this.idpUrl = idpUrl;
     }
 
-    public Map<String, String> getAllIdp() {
-        logger.info("Fetch All IDP details");
+    public Map<String, String> getAllIdp() throws JsonProcessingException {
 
+        logger.info("Fetch All IDP details");
         String token = getToken();
         logger.info("Access token:{}", token);
-        
+
         String idpJsonString = samlClient.getAllIdp(samlUtil.getIdpUrl(this.serverUrl, this.idpUrl, this.realm), token);
         logger.info("Returning IDP details idpJsonString:{}", idpJsonString);
         Map<String, String> idpMap = createIdentityProviderMap(idpJsonString);
         logger.info("Returning IDP details idpMap:{}", idpMap);
+
         return idpMap;
     }
 
-    public String getToken() {
+    public String getToken() throws JsonProcessingException {
         logger.info("Fetch Token for client");
         String token = samlClient.getAccessToken(samlUtil.getTokenUrl(this.serverUrl, this.tokenUrl, this.realm),
                 this.clientId, this.clientSecret, this.grantType, this.scope, this.username, this.password,
@@ -75,25 +79,29 @@ class SamlService {
         return token;
     }
 
-    private Map<String, String> createIdentityProviderMap(String jsonIdentityProviderList) throws IOException {
+    private Map<String, String> createIdentityProviderMap(String jsonIdentityProviderList)
+            throws JsonProcessingException {
         logger.info("jsonIdentityProviderList:{}", jsonIdentityProviderList);
-        Map<String, String>  idpMap = null;
+        Map<String, String> idpMap = null;
         if (StringUtils.isBlank(jsonIdentityProviderList)) {
             return idpMap;
         }
 
         JSONArray jsonArray = new JSONArray(jsonIdentityProviderList);
         int count = jsonArray.length(); // get totalCount of all jsonObjects
-        idpList = new ArrayList<>();
+        idpMap = new HashMap<>();
         for (int i = 0; i < count; i++) { // iterate through jsonArray
             JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
-            logger.trace(" i:{},{}", i, jsonObject);
+            logger.info(" i:{},{}", i, jsonObject);
             if (jsonObject != null) {
+                String jsonIdentityProvider = jsonObject.toString();
+                logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
+
                 String alias = Jackson.getElement(jsonIdentityProvider, "alias");
-                String displayName = jsonIdentityProvider, "displayName");
-                logger.trace(" i:{},alias:{}, displayName:{}", i, alias, displayName);
-                if(StringUtils.isNotBlank(alias)) {
-                    idpMap.put(alias,StringUtils.isNotBlank(displayName)?displayName:alias);
+                String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
+                logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+                if (StringUtils.isNotBlank(alias)) {
+                    idpMap.put(alias, StringUtils.isNotBlank(displayName) ? displayName : alias);
                 }
             }
         }
