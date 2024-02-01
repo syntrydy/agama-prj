@@ -11,7 +11,7 @@ idpMap = Call samlService getAllIdp
 // Log idpMap
 Log "@info " idpMap
 // Display SAML Discovery Page
-dataMap = RRF "samlDiscover.ftlh" idpMap
+dataMap = RRF "saml-idp-discovery.ftlh" idpMap
 // Finish SAML
-it_vkqhv = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_vkqhv
+it_eiwsj = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_eiwsj
