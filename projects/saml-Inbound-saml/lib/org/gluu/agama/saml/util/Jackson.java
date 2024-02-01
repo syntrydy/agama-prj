@@ -1,10 +1,4 @@
-/*
- * Janssen Project software is available under the MIT License (2008). See http://opensource.org/licenses/MIT for full text.
- *
- * Copyright (c) 2020, Janssen Project
- */
-
-package io.jans.configapi.core.util;
+package org.gluu.agama.saml.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
@@ -30,13 +24,12 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Yuriy Zabrovarnyy
- */
+
 public class Jackson {
 
     private static final Logger LOG = LoggerFactory.getLogger(Jackson.class);
-    private Jackson() {
+
+    public Jackson() {
     }
 
     public static JsonNode asJsonNode(String objAsString) throws JsonProcessingException {
@@ -50,16 +43,16 @@ public class Jackson {
     }
 
     public static <T> T applyPatch(String patchAsString, T obj) throws JsonPatchException, IOException {
-        LOG.debug("Patch details - patchAsString:{}, obj:{}", patchAsString, obj );
+        LOG.debug("Patch details - patchAsString:{}, obj:{}", patchAsString, obj);
         JsonPatch jsonPatch = JsonPatch.fromJson(Jackson.asJsonNode(patchAsString));
         return applyPatch(jsonPatch, obj);
     }
 
     public static <T> T applyJsonPatch(JsonPatch jsonPatch, T obj) throws JsonPatchException, IOException {
-        LOG.debug("Patch details - jsonPatch:{}, obj:{}", jsonPatch, obj );
+        LOG.debug("Patch details - jsonPatch:{}, obj:{}", jsonPatch, obj);
         return applyPatch(jsonPatch, obj);
     }
-    
+
     @SuppressWarnings("unchecked")
     public static <T> T applyPatch(JsonPatch jsonPatch, T obj) throws JsonPatchException, JsonProcessingException {
         Preconditions.checkNotNull(jsonPatch);
