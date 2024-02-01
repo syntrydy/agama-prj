@@ -12,9 +12,9 @@
 	
   
   
-	&lt;#list capitalList?keys as key&gt;
-    ${key} = ${capitalList[key]}
-     <!--#list-->
+	&lt;#list idpMap?keys as key&gt;
+	${key} = ${idpMap[key]}
+	<!--#list-->
   
 </body>
 
