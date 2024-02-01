@@ -3,7 +3,7 @@ Flow agama.saml
      Timeout 500 seconds
      Configs kcConf
 // Calling SAML service
-Log "@info " Calling SAML service
+Log "@info Calling SAML service"
 // Create instance of SamlService
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new serverUrl realm clientId clientSecret grantType scope username password spMetadataUrl tokenUrl idpUrl
 // Get All IDP Details
@@ -13,5 +13,5 @@ Log "@info " idpMap
 // Display SAML Discovery Page
 dataMap = RRF "saml-idp-discovery.ftlh" idpMap
 // Finish SAML
-it_pogcn = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_pogcn
+it_sdqrh = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_sdqrh
