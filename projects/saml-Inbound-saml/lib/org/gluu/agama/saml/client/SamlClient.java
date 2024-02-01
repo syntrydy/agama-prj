@@ -19,14 +19,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
-import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataOutput;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class SamlClient {
-    
-    
+import org.gluu.agama.saml.util.Jackson;
+
+public class SamlClient {
+
     private static final Logger logger = LoggerFactory.getLogger(SamlClient.class);
 
     public static final String AUTHORIZATION = "Authorization";
@@ -37,11 +37,12 @@ class SamlClient {
     public static final String IDP_URL_NULL = "IDP URL is null!!!";
     public static final String ACCESS_TOKEN = "access_token";
 
-    public SamlClient(){}
-    
+    public SamlClient() {
+    }
+
     public static String getAccessToken(final String tokenUrl, final String clientId, final String clientSecret,
             final String grantType, final String scope, final String username, final String password,
-            final String serverUrl) throws Exception {
+            final String serverUrl)  throws JsonProcessingException {
         logger.info("Get  tokenUrl:{}, clientId:{}, grantType:{}, scope:{}, username:{}, serverUrl:{}", tokenUrl,
                 clientId, grantType, scope, username, serverUrl);
 
@@ -66,11 +67,11 @@ class SamlClient {
                     "Response for Access Token -  response.getStatus():{}, response.getStatusInfo():{}, response.getEntity().getClass():{}",
                     response.getStatus(), response.getStatusInfo(), response.getEntity().getClass());
             String entity = response.readEntity(String.class);
-            
-            logger.info(" entity:{}",entity);
+
+            logger.info(" entity:{}", entity);
             if (response.getStatusInfo().equals(Status.OK)) {
                 token = Jackson.getElement(entity, ACCESS_TOKEN);
-                logger.info(" token:{}",token);
+                logger.info(" token:{}", token);
             } else {
                 throw new WebApplicationException(
                         "Error while Access Token is " + response.getStatusInfo() + " - " + entity, response);
@@ -108,7 +109,7 @@ class SamlClient {
 
         return identityProviderJsonList;
     }
-    
+
     private static Builder getClientBuilder(String url) {
         return ClientBuilder.newClient().target(url).request();
     }
