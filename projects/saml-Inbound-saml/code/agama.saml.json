@@ -47,8 +47,8 @@
 			"height": 123,
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
-				"x": 634,
-				"y": 152
+				"x": 633,
+				"y": 153
 			},
 			"type": "call",
 			"data": {
@@ -58,8 +58,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 634,
-					"y": 152
+					"x": 633,
+					"y": 153
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -82,8 +82,8 @@
 				"skake": false
 			},
 			"positionAbsolute": {
-				"x": 634,
-				"y": 152
+				"x": 633,
+				"y": 153
 			},
 			"selected": false,
 			"dragging": false
@@ -123,13 +123,16 @@
 					"inRepeatBlock": false,
 					"arguments": [
 						"serverUrl",
-						"tokenUrl",
+						"realm",
 						"clientId",
 						"clientSecret",
 						"grantType",
 						"scope",
 						"username",
-						"password"
+						"password",
+						"spMetadataUrl",
+						"tokenUrl",
+						"idpUrl"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "samlService"
@@ -251,15 +254,16 @@
 					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Log idpMap",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "idpMap",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 834,
@@ -311,7 +315,7 @@
 				"x": 1046,
 				"y": 156
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
@@ -423,8 +427,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
-		"zoom": 1
+		"x": -1144.1262955414873,
+		"y": -90.00519742473844,
+		"zoom": 2
 	}
 }
