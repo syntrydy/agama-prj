@@ -35,7 +35,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1289.5506591796875,
@@ -174,13 +174,13 @@
 					"comment": "Calling SAML service",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "Calling SAML service",
+					"logMessage": "\"Calling SAML service\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 234,
@@ -197,8 +197,8 @@
 				"id": "Agama-start-Flow-a1e9cbd2-e12b-44d9-84a9-ea9d26c3233a",
 				"type": "Agama-start-Flow",
 				"position": {
-					"x": 34,
-					"y": 155
+					"x": 35,
+					"y": 159
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -219,13 +219,13 @@
 				"skake": false
 			},
 			"position": {
-				"x": 34,
-				"y": 155
+				"x": 35,
+				"y": 159
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 34,
-				"y": 155
+				"x": 35,
+				"y": 159
 			},
 			"dragging": false
 		},
@@ -427,7 +427,7 @@
 		}
 	],
 	"viewport": {
-		"x": -577.5506591796874,
+		"x": 10,
 		"y": 15,
 		"zoom": 1
 	}
