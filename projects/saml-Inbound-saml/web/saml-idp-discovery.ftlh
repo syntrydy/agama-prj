@@ -44,7 +44,7 @@
 			</div>
 		  </div>
 		</form>
-		[#if idpMap??]
+		
 		<div class="space-y-9">
 		  <div class="text-sm flex justify-center items-center">
 			<label class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
@@ -63,7 +63,7 @@
 			  &lt;#list&gt;
 			</ul>
 		  </div>
-		  [/#if]
+	
 		</div>
 	  </div>
 	</div>
