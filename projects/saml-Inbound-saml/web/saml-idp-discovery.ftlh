@@ -1,7 +1,7 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SAML IDP Discovery Form
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Username_Password_Form
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
 <body>
 
@@ -13,8 +13,6 @@
 	
   
   
-	<h2> Sign in to your account 
-	</h2>
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
@@ -46,6 +44,29 @@
 			</div>
 		  </div>
 		</form>
+		<div class="space-y-9">
+		  <div class="text-sm flex justify-center items-center">
+			<label class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+			  Or sign in with
+			</label>
+		  </div>
+		  
+<div id="kc-social-providers" class="relative mb-2">
+                <hr>
+                <h4>Or sign in with</h4>
+
+                <ul class="space-y-9">
+				  &lt;#list idMap?keys as key&gt;
+                        <li>
+                            <a id="social-saml" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600" type="button" href="${key}">
+                                    <span class="relative mb-2">${key}</span>
+                            </a>
+                        </li>
+					 <!--#list-->
+                </ul>
+            </div>
+
+		</div>
 	  </div>
 	</div>
   
