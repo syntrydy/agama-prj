@@ -186,7 +186,7 @@
 				"type": "Agama-start-Flow",
 				"position": {
 					"x": 36,
-					"y": 157
+					"y": 156
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -197,7 +197,7 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"serverUrl\": \"https://pujavs-real-phoenix.gluu.info/kc\",\n  \"realm\": \"jans-api\",\n  \"clientId\": \"jans-api-dd75e63d-34e6-4712-8ce4-8aee08613bcb\",\n  \"clientSecret\": \"6f063545274de16da059\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans-api\",\n  \"password\": \"c13dd453bef8aff33c05\",\n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\",\n  \"idpMetadataImportUrl\":\"/admin/realms/%s/identity-provider/import-config\"\n}",
+					"configParams": "{\n  \"serverUrl\":\"https://pujavs-stunning-woodcock.gluu.info/kc\",\n  \"realm\": \"jans\",\n  \"clientId\": \"jans-2a20bd9b-f3d8-42f2-b027-3139d7720f98\",\n  \"clientSecret\": \"bff0651873e4e60b4464\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans\",\n  \"password\": \"f69569d3c2e610c283c4\",  \n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "500",
 					"inputs": "",
@@ -208,12 +208,12 @@
 			},
 			"position": {
 				"x": 36,
-				"y": 157
+				"y": 156
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 36,
-				"y": 157
+				"y": 156
 			},
 			"dragging": false
 		},
@@ -303,7 +303,7 @@
 				"x": 1061,
 				"y": 148
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
