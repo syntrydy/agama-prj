@@ -44,7 +44,6 @@
 			</div>
 		  </div>
 		</form>
-		
 		<div class="space-y-9">
 		  <div class="text-sm flex justify-center items-center">
 			<label class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
@@ -56,14 +55,13 @@
 			<h4>Or sign in with
 			</h4>
 			<ul class="space-y-9">
-			  &lt;#list idpMap?keys as key&gt;
+			  &lt;#list dataMap?keys as key&gt;
 			  <li>
 				<a id="social-saml" type="button" href="${key}" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600"><span class="relative mb-2">${key}</span></a>
 			  </li>
 			  &lt;#list&gt;
 			</ul>
 		  </div>
-	
 		</div>
 	  </div>
 	</div>
