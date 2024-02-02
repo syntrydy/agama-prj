@@ -13,5 +13,5 @@ Log "@info " idpMap
 // Display SAML Discovery Page
 dataMap = RRF "saml-idp-discovery.ftlh" idpMap
 // Finish SAML
-it_nwdbl = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_nwdbl
+it_gqtyz = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_gqtyz
