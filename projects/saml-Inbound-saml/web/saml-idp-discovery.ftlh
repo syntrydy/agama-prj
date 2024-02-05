@@ -44,7 +44,6 @@
 			</div>
 		  </div>
 		</form>
-		&lt;#list dataMap?keys as key&gt; ${key} = ${dataMap[key]}
 	  </div>
 	</div>
   
