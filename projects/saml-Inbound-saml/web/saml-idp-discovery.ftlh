@@ -45,13 +45,12 @@
 		  </div>
 		</form>
 		
-&lt;#list idpList as idp&gt;
-IDP: ${idp.alias} - ${idp.singleSignOnServiceUrl}
-<!--#list-->
-
-		  
 	  </div>
 	</div>
+	
+	&lt;#list idpList as idp&gt;
+		IDP: ${idp.alias} - ${idp.singleSignOnServiceUrl}
+		&lt;#list&gt;
   
   
 </body>
