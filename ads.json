@@ -15,18 +15,17 @@
         "noDirectLaunch": [],
         "configs": {
             "": {
-                "serverUrl": "https://pujavs-real-phoenix.gluu.info/kc",
-                "realm": "jans-api",
-                "clientId": "jans-api-dd75e63d-34e6-4712-8ce4-8aee08613bcb",
-                "clientSecret": "6f063545274de16da059",
+                "serverUrl": "https://pujavs-stunning-woodcock.gluu.info/kc",
+                "realm": "jans",
+                "clientId": "jans-2a20bd9b-f3d8-42f2-b027-3139d7720f98",
+                "clientSecret": "bff0651873e4e60b4464",
                 "grantType": "PASSWORD",
                 "scope": "openid",
-                "username": "jans-api",
-                "password": "c13dd453bef8aff33c05",
+                "username": "jans",
+                "password": "f69569d3c2e610c283c4",
                 "spMetadataUrl": "/realms/%s/broker/%s/endpoint/descriptor",
                 "tokenUrl": "/realms/%s/protocol/openid-connect/token",
-                "idpUrl": "/admin/realms/%s/identity-provider/instances",
-                "idpMetadataImportUrl": "/admin/realms/%s/identity-provider/import-config"
+                "idpUrl": "/admin/realms/%s/identity-provider/instances"
             },
             "agama.saml": {
                 "serverUrl": "https://pujavs-stunning-woodcock.gluu.info/kc",
