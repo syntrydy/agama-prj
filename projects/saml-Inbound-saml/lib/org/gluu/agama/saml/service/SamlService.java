@@ -97,14 +97,16 @@ public class SamlService {
                 String jsonIdentityProvider = jsonObject.toString();
                 logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
 
+                
                 String alias = Jackson.getElement(jsonIdentityProvider, "alias");
                 String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
-                String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
-                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
+                //String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
+                //logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
+                logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
                 
                 
                 if (StringUtils.isNotBlank(alias)) {
-                    idpMap.put(alias, singleSignOnServiceUrl);
+                    idpMap.put(alias, alias);
                 }
             }
         }
