@@ -336,7 +336,8 @@
 					"logMessage": "kcConf.serverUrl kcConf.realm kcConf.clientId",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -567,8 +568,8 @@
 		}
 	],
 	"viewport": {
-		"x": 313.93328342547443,
-		"y": 95.68562261014557,
-		"zoom": 0.6597539553864471
+		"x": 140.65007943920773,
+		"y": 45.34669614143351,
+		"zoom": 0.870550563296124
 	}
 }
