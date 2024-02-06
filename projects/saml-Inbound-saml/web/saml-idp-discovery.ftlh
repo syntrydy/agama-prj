@@ -55,7 +55,7 @@
 		  <!--#items-->
 		  &lt;#else&gt;
 		  <p>No IDP
-			<!--#list-->
+		<!--#list-->
 		  </p>
 		</div>
 	  </div>
