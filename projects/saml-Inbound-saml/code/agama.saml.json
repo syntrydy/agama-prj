@@ -211,7 +211,7 @@
 				"x": 518.509249867228,
 				"y": 399.53719476966245
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
@@ -263,8 +263,8 @@
 			"height": 123,
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
-				"x": 1138.681384586715,
-				"y": 375.5211576719459
+				"x": 1098.681384586715,
+				"y": 383.5211576719459
 			},
 			"type": "call",
 			"data": {
@@ -274,8 +274,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 1138.681384586715,
-					"y": 375.5211576719459
+					"x": 1098.681384586715,
+					"y": 383.5211576719459
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -295,13 +295,13 @@
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "idpMap"
 				},
-				"skake": true
+				"skake": false
 			},
 			"positionAbsolute": {
-				"x": 1138.681384586715,
-				"y": 375.5211576719459
+				"x": 1098.681384586715,
+				"y": 383.5211576719459
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-b8543000-fef5-456c-bcce-96dac44fb330",
 			"whenCondition": "",
