@@ -59,7 +59,7 @@ public class SamlService {
         logger.error("SamlService instance created ");
     }
 
-    public Map<String, String> getAllIdp() throws JsonProcessingException {
+    public Map<String, String> getIdpMap() throws JsonProcessingException {
 
         logger.info("Fetch All IDP details");
         String token = getToken();
@@ -116,11 +116,8 @@ public class SamlService {
 
                 String alias = Jackson.getElement(jsonIdentityProvider, "alias");
                 String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
-                // String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider,
-                // "singleSignOnServiceUrl");
-                // logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i,
-                // alias, displayName, singleSignOnServiceUrl);
-                logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+                String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
+                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
 
                 if (StringUtils.isNotBlank(alias)) {
                     idpMap.put(alias, alias);
