@@ -159,7 +159,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 789.2818546630513,
@@ -191,14 +191,14 @@
 					"type": "Agama-rrf-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Display SAML Discovery Page dataList",
+					"comment": "Display SAML Discovery Page idpMapData",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "saml-idp-discovery.ftlh",
-					"asssignedVariableName": "dataList",
-					"arguments": "idpList",
+					"asssignedVariableName": "idpMapData",
+					"arguments": "idpMap",
 					"position": {
 						"x": 1046
 					}
@@ -209,7 +209,7 @@
 				"x": 518.509249867228,
 				"y": 399.53719476966245
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
