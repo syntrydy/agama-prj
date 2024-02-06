@@ -41,7 +41,7 @@ public class SamlService {
 
     public SamlService(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
             String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl) {
-        logger.info("Get  tokenUrl:{}, clientId:{}, grantType:{}, scope:{}, username:{}, serverUrl:{}", tokenUrl,
+        logger.error("Get  tokenUrl:{}, clientId:{}, grantType:{}, scope:{}, username:{}, serverUrl:{}", tokenUrl,
                 clientId, grantType, scope, username, serverUrl);
 
         this.serverUrl = serverUrl;
@@ -55,6 +55,7 @@ public class SamlService {
         this.spMetadataUrl = spMetadataUrl;
         this.tokenUrl = tokenUrl;
         this.idpUrl = idpUrl;
+        logger.error("SamlService instance created "); 
     }
 
     public Map<String, String> getAllIdp() throws JsonProcessingException {
