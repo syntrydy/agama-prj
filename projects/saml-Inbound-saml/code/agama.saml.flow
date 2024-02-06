@@ -15,5 +15,5 @@ Log "@info " idpList
 // Display SAML Discovery Page dataList
 dataList = RRF "saml-idp-discovery.ftlh" idpList
 // Finish SAML
-it_yagrd = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_yagrd
+it_rcxie = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_rcxie
