@@ -24,7 +24,6 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class Jackson {
 
     private static final Logger LOG = LoggerFactory.getLogger(Jackson.class);
@@ -38,8 +37,14 @@ public class Jackson {
 
     @SuppressWarnings("unchecked")
     public static String getElement(String jsonString, String fieldName) throws JsonProcessingException {
+        LOG.info("Json getElement() - jsonString:{}, fieldName:{}", jsonString, fieldName);
         JsonNode jsonNode = JacksonUtils.newMapper().readTree(jsonString);
-        return jsonNode.get(fieldName).textValue();
+
+        LOG.info("Json getElement() - fieldName:{}, jsonNode.get(fieldName):{}", fieldName, jsonNode.get(fieldName));
+        if (jsonNode.get(fieldName) != null) {
+            return jsonNode.get(fieldName).textValue();
+        }
+        return null;
     }
 
     public static <T> T applyPatch(String patchAsString, T obj) throws JsonPatchException, IOException {
