@@ -46,7 +46,7 @@
 		</form>
 	  </div>
 	</div>
-	&lt;#list idpData as idp&gt;
+	&lt;#list dataList as idp&gt;
 	IDP: ${idp}
 	&lt;#list&gt;
   
