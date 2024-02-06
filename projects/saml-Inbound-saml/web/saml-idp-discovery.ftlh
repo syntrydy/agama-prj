@@ -52,10 +52,10 @@
 			  {$idp.alias}
 			</label>
 		  </div>
-		  <!--#items-->
+		     &lt;/#items&gt;&gt;
 		  &lt;#else&gt;
 		  <p>No IDP
-		<!--#list-->
+			&lt;/#list&gt;&gt;
 		  </p>
 		</div>
 	  </div>
