@@ -6,12 +6,14 @@ Flow agama.saml
 Log "@info Calling SAML service"
 // Create instance of SamlService
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serverUrl  kcConf.realm  kcConf.clientId  kcConf.clientSecret  kcConf.grantType  kcConf.scope  kcConf.username  kcConf.password  kcConf.spMetadataUrl  kcConf.tokenUrl  kcConf.idpUrl
+// Log samlService instance
+Log "@info " samlService
 // Get All IDP Details
-idpMap = Call samlService getAllIdp 
+idpList = Call samlService getIdpList 
 // Log idpMap
 Log "@info " idpMap
 // Display SAML Discovery Page
 dataMap = RRF "saml-idp-discovery.ftlh" idpMap
 // Finish SAML
-it_gfaxn = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_gfaxn
+it_awzfx = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_awzfx
