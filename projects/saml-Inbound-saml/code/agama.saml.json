@@ -211,7 +211,7 @@
 				"x": 518.509249867228,
 				"y": 399.53719476966245
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
@@ -264,7 +264,7 @@
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
 				"x": 1106.6512820476526,
-				"y": 385.5211576719459
+				"y": 384.5211576719459
 			},
 			"type": "call",
 			"data": {
@@ -275,7 +275,7 @@
 				"inRepeatBlock": "",
 				"position": {
 					"x": 1106.6512820476526,
-					"y": 385.5211576719459
+					"y": 384.5211576719459
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -285,8 +285,8 @@
 					"hasComment": true,
 					"comment": "Get All IDP Details",
 					"javaClassName": "",
-					"javaMethodName": "getIdpMap",
-					"javaVariableName": "samlService",
+					"javaMethodName": "getHardcodedIdp",
+					"javaVariableName": "",
 					"exceptionVariableField": "ex",
 					"callType": "Call method on instance",
 					"whenCondition": "",
@@ -299,9 +299,9 @@
 			},
 			"positionAbsolute": {
 				"x": 1106.6512820476526,
-				"y": 385.5211576719459
+				"y": 384.5211576719459
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-b8543000-fef5-456c-bcce-96dac44fb330",
 			"whenCondition": "",
