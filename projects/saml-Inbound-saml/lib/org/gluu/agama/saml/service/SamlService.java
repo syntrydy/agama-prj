@@ -1,6 +1,7 @@
 package org.gluu.agama.saml.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import java.io.IOException;
 import java.util.*;
@@ -55,7 +56,7 @@ public class SamlService {
         this.spMetadataUrl = spMetadataUrl;
         this.tokenUrl = tokenUrl;
         this.idpUrl = idpUrl;
-        logger.error("SamlService instance created "); 
+        logger.error("SamlService instance created ");
     }
 
     public Map<String, String> getAllIdp() throws JsonProcessingException {
@@ -71,7 +72,7 @@ public class SamlService {
 
         return idpMap;
     }
-    
+
     public List<IdentityProvider> getIdpList() throws JsonProcessingException {
 
         logger.info("Fetch All IDP details");
@@ -108,19 +109,19 @@ public class SamlService {
         idpMap = new HashMap<>();
         for (int i = 0; i < count; i++) { // iterate through jsonArray
             JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
-            logger.info(" i:{},{}", i, jsonObject);
+            logger.info(" i:{}, jsonObject:{}", i, jsonObject);
             if (jsonObject != null) {
                 String jsonIdentityProvider = jsonObject.toString();
                 logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
 
-                
                 String alias = Jackson.getElement(jsonIdentityProvider, "alias");
                 String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
-                //String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
-                //logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
+                // String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider,
+                // "singleSignOnServiceUrl");
+                // logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i,
+                // alias, displayName, singleSignOnServiceUrl);
                 logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
-                
-                
+
                 if (StringUtils.isNotBlank(alias)) {
                     idpMap.put(alias, alias);
                 }
@@ -129,7 +130,7 @@ public class SamlService {
         logger.info("idpMap:{}", idpMap);
         return idpMap;
     }
-    
+
     private List<IdentityProvider> createIdentityProviderList(String jsonIdentityProviderList)
             throws JsonProcessingException {
         logger.info("jsonIdentityProviderList:{}", jsonIdentityProviderList);
@@ -144,24 +145,30 @@ public class SamlService {
         IdentityProvider idp = null;
         for (int i = 0; i < count; i++) { // iterate through jsonArray
             JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
-            logger.info(" i:{},{}", i, jsonObject);
+            logger.info(" i:{}, jsonObject{}:", i, jsonObject);
             if (jsonObject != null) {
                 String jsonIdentityProvider = jsonObject.toString();
                 logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
 
-                
                 String alias = Jackson.getElement(jsonIdentityProvider, "alias");
+                logger.info(" i:{},alias:{}", i, alias);
+
                 String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
+                logger.info(" i:{},displayName:{}", i, displayName);
+
                 String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
-                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
-                //logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
-                
+                logger.info(" i:{},singleSignOnServiceUrl:{}", i, singleSignOnServiceUrl);
+
+                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName,
+                        singleSignOnServiceUrl);
+                // logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+
                 idp = new IdentityProvider();
                 if (StringUtils.isNotBlank(alias)) {
                     idp.setAlias(alias);
                     idp.setDisplayName(displayName);
                     idp.setSingleSignOnServiceUrl(singleSignOnServiceUrl);
-                    
+
                     idpList.add(idp);
                 }
             }
