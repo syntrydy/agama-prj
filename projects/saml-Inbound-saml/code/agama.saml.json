@@ -198,7 +198,9 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "saml-idp-discovery.ftlh",
 					"asssignedVariableName": "idpMapData",
-					"arguments": "idpMap",
+					"arguments": [
+						"idpMap"
+					],
 					"position": {
 						"x": 1046
 					}
