@@ -10,10 +10,10 @@ samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serve
 Log "@info " samlService
 // Get All IDP Details
 idpList = Call samlService getIdpList 
-// Log idpMap
-Log "@info " idpMap
-// Display SAML Discovery Page
-dataMap = RRF "saml-idp-discovery.ftlh" idpMap
+// Log idpList
+Log "@info " idpList
+// Display SAML Discovery Page dataList
+dataList = RRF "saml-idp-discovery.ftlh" idpList
 // Finish SAML
-it_awzfx = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_awzfx
+it_wyyhp = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_wyyhp
