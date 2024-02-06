@@ -44,17 +44,11 @@
 			</div>
 		  </div>
 		</form>
-		&lt;#list idpMapData?keys as key&gt;
-		<div class="space-y-9">
-		  <div class="text-sm flex justify-center items-center">
-			<label for="idp_name" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
-			  ${key} = ${idpMapData[key]} 
-			</label>
-		  </div>
-		  &lt;/#list&gt;
-		  <p>
-		  </p>
-		</div>
+	[#list idps as idp]
+  <b>${idp.alias}</b>
+  ${idp.displayName}
+  <br>
+[/#list]
 	  </div>
 	</div>
   
