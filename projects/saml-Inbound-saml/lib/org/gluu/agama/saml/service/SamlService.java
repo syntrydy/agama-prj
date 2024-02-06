@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.gluu.agama.saml.client.SamlClient;
+import org.gluu.agama.saml.model.IdentityProvider;
 import org.gluu.agama.saml.util.SamlUtil;
 import org.gluu.agama.saml.util.Jackson;
 
@@ -69,6 +70,20 @@ public class SamlService {
 
         return idpMap;
     }
+    
+    public List<IdentityProvider> getIdpList() throws JsonProcessingException {
+
+        logger.info("Fetch All IDP details");
+        String token = getToken();
+        logger.info("Access token:{}", token);
+
+        String idpJsonString = samlClient.getAllIdp(samlUtil.getIdpUrl(this.serverUrl, this.idpUrl, this.realm), token);
+        logger.info("Returning IDP details idpJsonString:{}", idpJsonString);
+        List<IdentityProvider> idpList = createIdentityProviderList(idpJsonString);
+        logger.info("Returning IDP details idpList:{}", idpList);
+
+        return idpList;
+    }
 
     public String getToken() throws JsonProcessingException {
         logger.info("Fetch Token for client");
@@ -112,6 +127,46 @@ public class SamlService {
         }
         logger.info("idpMap:{}", idpMap);
         return idpMap;
+    }
+    
+    private List<IdentityProvider> createIdentityProviderList(String jsonIdentityProviderList)
+            throws JsonProcessingException {
+        logger.info("jsonIdentityProviderList:{}", jsonIdentityProviderList);
+        List<IdentityProvider> idpList = null;
+        if (StringUtils.isBlank(jsonIdentityProviderList)) {
+            return idpList;
+        }
+
+        JSONArray jsonArray = new JSONArray(jsonIdentityProviderList);
+        int count = jsonArray.length(); // get totalCount of all jsonObjects
+        idpList = new ArrayList<>();
+        IdentityProvider idp = null;
+        for (int i = 0; i < count; i++) { // iterate through jsonArray
+            JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
+            logger.info(" i:{},{}", i, jsonObject);
+            if (jsonObject != null) {
+                String jsonIdentityProvider = jsonObject.toString();
+                logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
+
+                
+                String alias = Jackson.getElement(jsonIdentityProvider, "alias");
+                String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
+                String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
+                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
+                //logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+                
+                idp = new IdentityProvider();
+                if (StringUtils.isNotBlank(alias)) {
+                    idp.setAlias(alias);
+                    idp.setDisplayName(displayName);
+                    idp.setSingleSignOnServiceUrl(singleSignOnServiceUrl);
+                    
+                    idpList.add(idp);
+                }
+            }
+        }
+        logger.info("Finally idpList:{}", idpList);
+        return idpList;
     }
 
 }
