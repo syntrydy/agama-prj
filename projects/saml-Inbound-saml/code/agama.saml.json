@@ -263,8 +263,8 @@
 			"height": 123,
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
-				"x": 1106.6512820476526,
-				"y": 384.5211576719459
+				"x": 1138.681384586715,
+				"y": 375.5211576719459
 			},
 			"type": "call",
 			"data": {
@@ -274,8 +274,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 1106.6512820476526,
-					"y": 384.5211576719459
+					"x": 1138.681384586715,
+					"y": 375.5211576719459
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -286,7 +286,7 @@
 					"comment": "Get All IDP Details",
 					"javaClassName": "",
 					"javaMethodName": "getHardcodedIdp",
-					"javaVariableName": "",
+					"javaVariableName": "samlService",
 					"exceptionVariableField": "ex",
 					"callType": "Call method on instance",
 					"whenCondition": "",
@@ -298,8 +298,8 @@
 				"skake": true
 			},
 			"positionAbsolute": {
-				"x": 1106.6512820476526,
-				"y": 384.5211576719459
+				"x": 1138.681384586715,
+				"y": 375.5211576719459
 			},
 			"selected": true,
 			"dragging": false,
@@ -570,7 +570,7 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
+		"x": -55.03010253906249,
 		"y": 15,
 		"zoom": 1
 	}
