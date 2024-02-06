@@ -44,13 +44,11 @@
 			</div>
 		  </div>
 		</form>
-		
 	  </div>
 	</div>
-	
 	&lt;#list idpList as idp&gt;
-		IDP: ${idp.alias} - ${idp.singleSignOnServiceUrl}
-		&lt;#list&gt;
+	IDP: ${idp}
+	&lt;#list&gt;
   
   
 </body>
