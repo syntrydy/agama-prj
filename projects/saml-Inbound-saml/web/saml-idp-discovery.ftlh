@@ -44,11 +44,11 @@
 			</div>
 		  </div>
 		</form>
-		&lt;#list idpMap?keys as key&gt;
+		&lt;#list idpMapData?keys as key&gt;
 		<div class="space-y-9">
 		  <div class="text-sm flex justify-center items-center">
 			<label for="idp_name" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
-			  ${key} = ${idpMap[key]} 
+			  ${key} = ${idpMapData[key]} 
 			</label>
 		  </div>
 		  &lt;/#list&gt;&gt;
