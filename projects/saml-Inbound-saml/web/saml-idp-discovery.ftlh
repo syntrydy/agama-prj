@@ -44,15 +44,19 @@
 			</div>
 		  </div>
 		</form>
-		&lt;#list dataList as idp&gt;
+		&lt;#list idpList&gt;
+		  &lt;#items as idp&gt;
 		<div class="space-y-9">
 		  <div class="text-sm flex justify-center items-center">
 			<label for="idp_name" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 			  {$idp.alias}
 			</label>
 		  </div>
-		  &lt;#list&gt;
-		</div>
+		    <!--#items-->
+		&lt;#else&gt;
+  <p>No IDP
+<!--#list-->
+		</p></div>
 	  </div>
 	</div>
   
