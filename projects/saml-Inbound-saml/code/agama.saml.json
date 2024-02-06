@@ -150,16 +150,16 @@
 					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Log idpList",
+					"comment": "Log idpMap",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "idpList",
+					"logMessage": "idpMap",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 789.2818546630513,
@@ -262,7 +262,7 @@
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
 				"x": 1108.822185903813,
-				"y": 392.0338692404277
+				"y": 387.69206152810654
 			},
 			"type": "call",
 			"data": {
@@ -273,7 +273,7 @@
 				"inRepeatBlock": "",
 				"position": {
 					"x": 1108.822185903813,
-					"y": 392.0338692404277
+					"y": 387.69206152810654
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -297,9 +297,9 @@
 			},
 			"positionAbsolute": {
 				"x": 1108.822185903813,
-				"y": 392.0338692404277
+				"y": 387.69206152810654
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-b8543000-fef5-456c-bcce-96dac44fb330",
 			"whenCondition": "",
@@ -568,8 +568,8 @@
 		}
 	],
 	"viewport": {
-		"x": 227.13370764084834,
-		"y": -71.87048832258358,
-		"zoom": 0.9548416039104164
+		"x": -310.9424115200309,
+		"y": -213.5587548022213,
+		"zoom": 1.381912879967776
 	}
 }
