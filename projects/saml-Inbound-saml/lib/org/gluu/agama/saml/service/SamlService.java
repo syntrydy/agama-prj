@@ -58,6 +58,17 @@ public class SamlService {
         this.idpUrl = idpUrl;
         logger.error("SamlService instance created ");
     }
+    
+    public Map<String, List> getHardcodedIdp() throws JsonProcessingException{
+        logger.info("getHardcodedIdp() ");
+        Map<String, List> testMap = new HashMap<>();
+        
+        List<IdentityProvider> testList = getIdpList();
+        logger.info("testList:{}", testList);
+        testMap.put("idps", testList);
+        logger.info("Returning IDP details testMap:{}", testMap);
+        return testMap;
+    }
 
     public Map<String, String> getIdpMap() throws JsonProcessingException {
 
