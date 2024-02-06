@@ -261,8 +261,8 @@
 			"height": 122,
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
-				"x": 1108.822185903813,
-				"y": 387.69206152810654
+				"x": 1106.6512820476526,
+				"y": 385.5211576719459
 			},
 			"type": "call",
 			"data": {
@@ -272,8 +272,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 1108.822185903813,
-					"y": 387.69206152810654
+					"x": 1106.6512820476526,
+					"y": 385.5211576719459
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -296,8 +296,8 @@
 				"skake": false
 			},
 			"positionAbsolute": {
-				"x": 1108.822185903813,
-				"y": 387.69206152810654
+				"x": 1106.6512820476526,
+				"y": 385.5211576719459
 			},
 			"selected": false,
 			"dragging": false,
