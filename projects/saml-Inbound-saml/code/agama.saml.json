@@ -211,7 +211,7 @@
 				"x": 518.509249867228,
 				"y": 399.53719476966245
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-6878aafe-f259-42ac-990e-d98611cf1c0e",
 			"whenCondition": "",
@@ -285,7 +285,7 @@
 					"hasComment": true,
 					"comment": "Get All IDP Details",
 					"javaClassName": "",
-					"javaMethodName": "getHardcodedIdp",
+					"javaMethodName": "getIdps",
 					"javaVariableName": "samlService",
 					"exceptionVariableField": "ex",
 					"callType": "Call method on instance",
@@ -301,7 +301,7 @@
 				"x": 1098.681384586715,
 				"y": 383.5211576719459
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"parentId": "Agama-log-Node-b8543000-fef5-456c-bcce-96dac44fb330",
 			"whenCondition": "",
