@@ -61,13 +61,13 @@ public class SamlService {
     
     public Map<String, List> getIdps() throws JsonProcessingException{
         logger.info("getHardcodedIdp() ");
-        Map<String, List> testMap = new HashMap<>();
+        Map<String, List> idpMap = new HashMap<>();
         
         List<IdentityProvider> idpList = getIdpList();
         logger.info("idpList:{}", idpList);
-        testMap.put("idps", idpList);
-        logger.info("Returning IDP details testMap:{}", testMap);
-        return testMap;
+        idpMap.put("idps", idpList);
+        logger.info("Returning IDP details idpMap:{}", idpMap);
+        return idpMap;
     }
 
     public Map<String, String> getIdpMap() throws JsonProcessingException {
@@ -169,7 +169,7 @@ public class SamlService {
 
                 logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName,
                         singleSignOnServiceUrl);
-                // logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+                logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
 
                 idp = new IdentityProvider();
                 if (StringUtils.isNotBlank(alias)) {
