@@ -28,14 +28,14 @@
                 "idpUrl": "/admin/realms/%s/identity-provider/instances"
             },
             "agama.saml": {
-                "serverUrl": "https://pujavs-stunning-woodcock.gluu.info/kc",
+                "serverUrl": "https://pujavs-advanced-ewe.gluu.info/kc",
                 "realm": "jans",
-                "clientId": "jans-2a20bd9b-f3d8-42f2-b027-3139d7720f98",
-                "clientSecret": "bff0651873e4e60b4464",
+                "clientId": "jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f",
+                "clientSecret": "042e7016ecaba96e64b6",
                 "grantType": "PASSWORD",
                 "scope": "openid",
                 "username": "jans",
-                "password": "f69569d3c2e610c283c4",
+                "password": "2d72acff7b8d2762035c",
                 "spMetadataUrl": "/realms/%s/broker/%s/endpoint/descriptor",
                 "tokenUrl": "/realms/%s/protocol/openid-connect/token",
                 "idpUrl": "/admin/realms/%s/identity-provider/instances"
