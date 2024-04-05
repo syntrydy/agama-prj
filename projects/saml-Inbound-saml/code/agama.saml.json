@@ -94,7 +94,7 @@
 				"type": "Agama-start-Flow",
 				"position": {
 					"x": -110.87877930223812,
-					"y": 156
+					"y": 154.48428343348962
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -105,7 +105,7 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"serverUrl\":\"https://pujavs-stunning-woodcock.gluu.info/kc\",\n  \"realm\": \"jans\",\n  \"clientId\": \"jans-2a20bd9b-f3d8-42f2-b027-3139d7720f98\",\n  \"clientSecret\": \"bff0651873e4e60b4464\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans\",\n  \"password\": \"f69569d3c2e610c283c4\",  \n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\"\n}",
+					"configParams": "{\n  \"serverUrl\":\"https://pujavs-advanced-ewe.gluu.info/kc\",\n  \"realm\": \"jans\",\n  \"clientId\": \"jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f\",\n  \"clientSecret\": \"042e7016ecaba96e64b6\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans\",\n  \"password\": \"2d72acff7b8d2762035c\",  \n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "500",
 					"inputs": "",
@@ -116,12 +116,12 @@
 			},
 			"position": {
 				"x": -110.87877930223812,
-				"y": 156
+				"y": 154.48428343348962
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -110.87877930223812,
-				"y": 156
+				"y": 154.48428343348962
 			},
 			"dragging": false
 		},
@@ -301,7 +301,7 @@
 				"x": 1098.681384586715,
 				"y": 383.5211576719459
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"parentId": "Agama-log-Node-b8543000-fef5-456c-bcce-96dac44fb330",
 			"whenCondition": "",
@@ -570,8 +570,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
-		"zoom": 1
+		"x": 67.40541871982282,
+		"y": 281.9124038840447,
+		"zoom": 1.0000000000000004
 	}
 }
