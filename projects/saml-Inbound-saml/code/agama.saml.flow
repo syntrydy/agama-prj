@@ -15,7 +15,6 @@ idpMap | ex = Call samlService getIdps
 // Log idpMap
 Log "@info " idpMap
 // Display SAML Discovery Page idpMapData
-idpMapData = RRF "saml-idp-discovery.ftlh" idpMap
-// Finish SAML
-it_fpikh = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_fpikh
+extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
+RFAC __________
+Finish __________
