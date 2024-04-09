@@ -30,11 +30,12 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
+					"returnVariable": "{ userId: \"puja\", property1: \"reuslt\"}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1254.794965493259,
 				"y": 22.4644571828357
@@ -47,7 +48,7 @@
 			"id": "Agama-rfac-Node-6df265bd-f782-4829-ade1-a5d0d1b57994",
 			"position": {
 				"x": -953.6421978880069,
-				"y": 19.686679405057916
+				"y": 15.520012738391301
 			},
 			"type": "rfac",
 			"data": {
@@ -59,7 +60,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": -953.6421978880069,
-					"y": 19.686679405057916
+					"y": 15.520012738391301
 				},
 				"agamaData": {
 					"id": "Agama-rfac-Node-6df265bd-f782-4829-ade1-a5d0d1b57994",
@@ -72,15 +73,15 @@
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "extIdpData.",
+					"idpAuthEndpoint": "extIdpData.extIdpRedirectUrl",
 					"assignCallbackResult": "reuslt"
 				},
 				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -953.6421978880069,
-				"y": 19.686679405057916
+				"y": 15.520012738391301
 			},
 			"dragging": false
 		},
@@ -634,8 +635,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1812.1851815774462,
-		"y": 585.5583040403419,
-		"zoom": 1.2535928111464192
+		"x": 1250.770483030871,
+		"y": 401.77151378870855,
+		"zoom": 0.7200000000000002
 	}
 }
