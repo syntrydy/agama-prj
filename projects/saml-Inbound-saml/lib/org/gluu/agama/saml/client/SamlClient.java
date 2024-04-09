@@ -109,6 +109,36 @@ public class SamlClient {
 
         return identityProviderJsonList;
     }
+    
+    public String getExtIDPTokenResponse(String extIdpUrl, String token) {
+        logger.info(" Get Ext IDP Token Response - extIdpUrl:{}, token:{}", extIdpUrl, token);
+        Builder client = getClientBuilder(extIdpUrl);
+        client.header(CONTENT_TYPE, MediaType.APPLICATION_JSON);
+        client.header(AUTHORIZATION, BEARER + token);
+        Response response = client.get();
+        logger.debug("Ext IDP Token - response:{}", response);
+
+        String responseData = null;
+        if (response != null) {
+            logger.info(
+                    "Fetch Ext IDP Token response.getStatus():{}, response.getStatusInfo():{}, response.getEntity().getClass():{}",
+                    response.getStatus(), response.getStatusInfo(), response.getEntity().getClass());
+            String entity = response.readEntity(String.class);
+            logger.info("Ext IDP Token entity:{}", entity);
+            if (response.getStatusInfo().equals(Status.OK)) {
+
+                responseData = entity;
+                logger.info("Ext IDP Token - responseData:{}", responseData);
+            } else {
+                throw new WebApplicationException(
+                        "Error while fetching Ext IDP Token is " + response.getStatusInfo() + " - " + entity, response);
+            }
+        }
+
+        return responseData;
+        
+    }
+    
 
     private static Builder getClientBuilder(String url) {
         return ClientBuilder.newClient().target(url).request();
