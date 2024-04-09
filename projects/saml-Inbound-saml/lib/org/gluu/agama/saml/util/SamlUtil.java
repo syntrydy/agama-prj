@@ -42,5 +42,18 @@ public class SamlUtil {
         LOG.info("SAML IDP Url - idpUrl:{}", idpUrl);
         return idpUrl;
     }
+    
+    public String getExtIDPTokenUrl(String serverUrl, String partialExtIDPTokenUrl, String realm, String idpAlias) {
+        LOG.info("Get SAML IDP Url - serverUrl:{}, partialExtIDPTokenUrl:{}, realm:{}, idpAlias:{}", serverUrl, partialExtIDPTokenUrl, realm, idpAlias);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(serverUrl).append(partialExtIDPTokenUrl);
+        LOG.info("getExtIDPTokenUrl - sb:{}", sb);
+        String extIDPTokenUrl = String.format(sb.toString(), realm, idpAlias);
+
+        LOG.info("extIDPTokenUrl:{}", extIDPTokenUrl);
+        return extIDPTokenUrl;
+    }
+
 
 }
