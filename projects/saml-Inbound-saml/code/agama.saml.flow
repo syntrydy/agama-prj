@@ -17,6 +17,6 @@ Log "@info " idpMap
 // Display SAML Discovery Page idpMapData
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Redirect to external IDP
-reuslt = RFAC https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish-idp
-it_juuhu = undefined
-Finish it_juuhu
+callData = RFAC https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish-idp
+it_hhldd = undefined
+Finish it_hhldd
