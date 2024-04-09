@@ -31,7 +31,8 @@
 					"comment": "",
 					"flowfilename": "",
 					"returnVariable": "{ userId: \"puja\", property1: \"reuslt\"}",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "SAML IDP Flow End"
 				},
 				"skake": false
 			},
@@ -73,10 +74,10 @@
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "extIdpData.extIdpRedirectUrl",
+					"idpAuthEndpoint": "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish-idp",
 					"assignCallbackResult": "reuslt"
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -635,8 +636,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1250.770483030871,
-		"y": 401.77151378870855,
-		"zoom": 0.7200000000000002
+		"x": 1107,
+		"y": 270,
+		"zoom": 0.75
 	}
 }
