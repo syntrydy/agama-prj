@@ -17,6 +17,6 @@ Log "@info " idpMap
 // Display SAML Discovery Page idpMapData
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Redirect to external IDP
-reuslt = RFAC extIdpData.
-it_aitkh = undefined
-Finish it_aitkh
+reuslt = RFAC extIdpData.extIdpRedirectUrl
+it_gwgqq = undefined
+Finish it_gwgqq
