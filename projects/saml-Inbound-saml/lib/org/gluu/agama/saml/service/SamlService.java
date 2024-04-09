@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.gluu.agama.saml.client.SamlClient;
+import org.gluu.agama.saml.model.SamlConfig;
 import org.gluu.agama.saml.model.IdentityProvider;
 import org.gluu.agama.saml.util.SamlUtil;
 import org.gluu.agama.saml.util.Jackson;
@@ -36,14 +37,16 @@ public class SamlService {
     private String spMetadataUrl;
     private String tokenUrl;
     private String idpUrl;
+    private String extIDPTokenUrl;
 
     private SamlClient samlClient = new SamlClient();
+    private SamlConfig samlConfig ;
     private SamlUtil samlUtil = new SamlUtil();
 
     public SamlService(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
-            String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl) {
-        logger.error("Get  tokenUrl:{}, clientId:{}, grantType:{}, scope:{}, username:{}, serverUrl:{}", tokenUrl,
-                clientId, grantType, scope, username, serverUrl);
+            String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl, String extIDPTokenUrl) {
+        logger.error("Get  serverUrl:{}, realm:{}, clientId:{}, clientSecret:{}, grantType:{}, scope:{}, username:{}, password:{}, spMetadataUrl:{}, tokenUrl:{}, idpUrl:{}, extIDPTokenUrl:{}", serverUrl,
+                realm, clientId, clientSecret, grantType, scope, username, password, spMetadataUrl, tokenUrl, idpUrl, extIDPTokenUrl);
 
         this.serverUrl = serverUrl;
         this.realm = realm;
@@ -56,7 +59,11 @@ public class SamlService {
         this.spMetadataUrl = spMetadataUrl;
         this.tokenUrl = tokenUrl;
         this.idpUrl = idpUrl;
-        logger.error("SamlService instance created ");
+        this. extIDPTokenUrl = extIDPTokenUrl;
+        
+        this.samlConfig = new SamlConfig(serverUrl, realm, clientId, clientSecret, grantType,
+                scope, username, password,  spMetadataUrl,  tokenUrl,  idpUrl,  extIDPTokenUrl);
+        logger.error("SamlService instance created - samlConfig:{} ", samlConfig);
     }
     
     public Map<String, List> getIdps() throws JsonProcessingException{
@@ -96,6 +103,22 @@ public class SamlService {
         logger.info("Returning IDP details idpList:{}", idpList);
 
         return idpList;
+    }
+    
+    public String getExtIDPToken(String idpAlias) throws JsonProcessingException {
+
+        logger.info("Fetch Ext IDP Response for idpAlias:{} ",idpAlias);
+        String token = getToken();
+        logger.info("Token for IDP response is :{}", token);
+
+        String url = samlUtil.getExtIDPTokenUrl(this.serverUrl, this.extIDPTokenUrl, this.realm, idpAlias);
+        logger.info("URL for Ext IDP response is :{}", url);
+        
+        String idpJsonString = samlClient.getExtIDPTokenResponse(url, token);
+        logger.info("Returning Ext IDP Response details idpJsonString:{}", idpJsonString);
+
+
+        return idpJsonString;
     }
 
     public String getToken() throws JsonProcessingException {
@@ -184,5 +207,7 @@ public class SamlService {
         logger.info("Finally idpList:{}", idpList);
         return idpList;
     }
+    
+    
 
 }
