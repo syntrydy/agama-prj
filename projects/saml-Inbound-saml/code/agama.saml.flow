@@ -12,7 +12,8 @@ samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serve
 Log "@info " samlService
 // Get All IDP Details
 idpMap | ex = Call samlService getIdps 
-// Log idpMap
+// Log IDP Map
 Log "@info " idpMap
+// Display SAML IDP Discovery Page
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
-Log "@info " extIdpData.extIdpRedirectUrl
+Log "@ " __________
