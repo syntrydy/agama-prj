@@ -527,7 +527,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "{\"idpMap\":$idpMap}",
+							"assignmentExpression": "{\"idpMap\":idpMap}",
 							"assignedVariableName": "idpMapData"
 						}
 					],
