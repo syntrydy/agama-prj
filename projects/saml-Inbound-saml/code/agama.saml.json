@@ -1,12 +1,12 @@
 {
 	"nodes": [
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 			"position": {
-				"x": -1344.6736741316336,
-				"y": 245.85486709737398
+				"x": -1137.020504519709,
+				"y": 179.16333817091635
 			},
 			"type": "log",
 			"data": {
@@ -17,8 +17,8 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -1344.6736741316336,
-					"y": 245.85486709737398
+					"x": -1137.020504519709,
+					"y": 179.16333817091635
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
@@ -26,19 +26,20 @@
 					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Log extIdpData.extIdpRedirectUrl",
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "extIdpData.extIdpRedirectUrl",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": -1344.6736741316336,
-				"y": 245.85486709737398
+				"x": -1137.020504519709,
+				"y": 179.16333817091635
 			},
 			"dragging": false
 		},
@@ -77,9 +78,10 @@
 					"templatePath": "saml-idp-discovery.ftlh",
 					"asssignedVariableName": "extIdpData",
 					"arguments": "idpMap"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1353.7075183034658,
 				"y": 19.718353876471042
@@ -119,7 +121,8 @@
 					"logMessage": "idpMap",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
