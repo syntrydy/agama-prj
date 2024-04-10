@@ -533,9 +533,9 @@
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -865.0349408605501,
 				"y": -22.240023717220424
@@ -547,8 +547,8 @@
 			"height": 123,
 			"id": "Agama-rrf-Node-bf3732f9-a7f8-463d-8f83-4f7d52897885",
 			"position": {
-				"x": -1090.374184970133,
-				"y": -6.9483127901957005
+				"x": -1086.374184970133,
+				"y": -2.9483127901957573
 			},
 			"type": "rrf",
 			"data": {
@@ -559,8 +559,8 @@
 				"inRepeatBlock": "",
 				"inIterateBlock": "",
 				"position": {
-					"x": -1090.374184970133,
-					"y": -6.9483127901957005
+					"x": -1086.374184970133,
+					"y": -2.9483127901957573
 				},
 				"agamaData": {
 					"id": "Agama-rrf-Node-bf3732f9-a7f8-463d-8f83-4f7d52897885",
@@ -580,10 +580,10 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": -1090.374184970133,
-				"y": -6.9483127901957005
+				"x": -1086.374184970133,
+				"y": -2.9483127901957573
 			},
 			"dragging": false,
 			"parentId": "Agama-assignment-Node-fd48d076-cab6-4953-8ccc-77674a21f9d6",
