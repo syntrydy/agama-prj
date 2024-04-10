@@ -15,12 +15,12 @@ idpMapData | ex = Call samlService getIdps
 // Log IDP Map
 Log "@info " idpMapData
 // Display SAML IDP Discovery Page
-extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
+extIdpData = RRF "saml-idp-discovery.ftlh" idpMapData
 // Log extIdpData.extIdpRedirectUrl
 Log "@info " extIdpData.extIdpRedirectUrl
 // Redirect to External IDP 
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
 // Log external IDP result
 Log "@info " extResult
-it_kygxw = undefined
-Finish it_kygxw
+it_xfcsz = undefined
+Finish it_xfcsz
