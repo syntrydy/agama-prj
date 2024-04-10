@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 123,
+			"id": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
+			"position": {
+				"x": -1126.3538378530423,
+				"y": 211.1633381709164
+			},
+			"type": "rfac",
+			"data": {
+				"id": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
+				"type": "Agama-rfac-Node",
+				"parentId": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": -1126.3538378530423,
+					"y": 211.1633381709164
+				},
+				"agamaData": {
+					"id": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
+					"parentId": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
+					"type": "Agama-rfac-Node",
+					"displayName": "External IDP Page",
+					"hasComment": true,
+					"comment": "Redirect to External IDP ",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"nodeIcon": "ic:baseline-insert-link",
+					"idpAuthEndpoint": "extIdpData.extIdpRedirectUrl",
+					"assignCallbackResult": "exTReuslt"
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": -1126.3538378530423,
+				"y": 211.1633381709164
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 			"position": {
 				"x": -1386.3538378530423,
@@ -36,7 +78,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1386.3538378530423,
 				"y": 7.16333817091629
@@ -553,6 +595,23 @@
 			"type": "default",
 			"source": "Agama-rrf-Node-bf3732f9-a7f8-463d-8f83-4f7d52897885",
 			"target": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14-Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b-28bef331-2f57-4ae2-b896-13455b59f2ab",
+			"type": "default",
+			"source": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
+			"target": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
 			"label": "",
 			"labelBgPadding": [
 				8,
