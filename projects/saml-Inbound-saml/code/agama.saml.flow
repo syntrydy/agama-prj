@@ -20,3 +20,5 @@ extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 Log "@info " extIdpData.extIdpRedirectUrl
 // Redirect to External IDP 
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
+// Log external IDP result
+Log "@info " extResult
