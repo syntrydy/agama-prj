@@ -345,7 +345,7 @@
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
 				"x": -361.6321184869228,
-				"y": -30.862264909506735
+				"y": -32.19559824284005
 			},
 			"type": "call",
 			"data": {
@@ -356,7 +356,7 @@
 				"inRepeatBlock": "",
 				"position": {
 					"x": -361.6321184869228,
-					"y": -30.862264909506735
+					"y": -32.19559824284005
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
@@ -380,7 +380,7 @@
 			},
 			"positionAbsolute": {
 				"x": -361.6321184869228,
-				"y": -30.862264909506735
+				"y": -32.19559824284005
 			},
 			"selected": false,
 			"dragging": false,
@@ -576,7 +576,7 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "saml-idp-discovery.ftlh",
 					"asssignedVariableName": "extIdpData",
-					"arguments": "idpMapData"
+					"arguments": "idpMap"
 				},
 				"skake": false
 			},
