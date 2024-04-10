@@ -33,7 +33,8 @@
 					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "SAML IDP flow complete"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
