@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 123,
+			"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+			"position": {
+				"x": -593.020504519709,
+				"y": 197.83000483758298
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"handles": [],
+				"position": {
+					"x": -593.020504519709,
+					"y": 197.83000483758298
+				},
+				"agamaData": {
+					"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+					"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "SAML IDP flow complete"
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": -593.020504519709,
+				"y": 197.83000483758298
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
 			"position": {
 				"x": -830.3538378530423,
@@ -33,9 +75,10 @@
 					"logMessage": "extResult",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -830.3538378530423,
 				"y": 207.16333817091635
@@ -672,6 +715,23 @@
 			"type": "default",
 			"source": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
 			"target": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a-finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8-e2955fb5-4de6-4d06-b339-09a35ea728f1",
+			"type": "default",
+			"source": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+			"target": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
 			"label": "",
 			"labelBgPadding": [
 				8,
