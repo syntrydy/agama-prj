@@ -11,9 +11,11 @@ samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serve
 // Log samlService instance
 Log "@info " samlService
 // Get All IDP Details
-idpMapData | ex = Call samlService getIdps 
+idpMap | ex = Call samlService getIdps 
 // Log IDP Map
-Log "@info " idpMapData
+Log "@info " idpMap
+// Map idpMap
+idpMapData = "{"idpMap":idpMap}"
 // Display SAML IDP Discovery Page
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMapData
 // Log extIdpData.extIdpRedirectUrl
@@ -22,5 +24,5 @@ Log "@info " extIdpData.extIdpRedirectUrl
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
 // Log external IDP result
 Log "@info " extResult
-it_xfcsz = undefined
-Finish it_xfcsz
+it_fzoee = undefined
+Finish it_fzoee
