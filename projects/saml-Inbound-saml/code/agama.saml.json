@@ -499,7 +499,7 @@
 			"height": 123,
 			"id": "Agama-assignment-Node-fd48d076-cab6-4953-8ccc-77674a21f9d6",
 			"position": {
-				"x": -866.3682741938835,
+				"x": -865.0349408605501,
 				"y": -22.240023717220424
 			},
 			"type": "assignment",
@@ -511,7 +511,7 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -866.3682741938835,
+					"x": -865.0349408605501,
 					"y": -22.240023717220424
 				},
 				"agamaData": {
@@ -527,7 +527,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "{\"idpMap\":idpMap}",
+							"assignmentExpression": "{\"idpData\": idpMap}",
 							"assignedVariableName": "idpMapData"
 						}
 					],
@@ -537,7 +537,7 @@
 			},
 			"selected": true,
 			"positionAbsolute": {
-				"x": -866.3682741938835,
+				"x": -865.0349408605501,
 				"y": -22.240023717220424
 			},
 			"dragging": false
