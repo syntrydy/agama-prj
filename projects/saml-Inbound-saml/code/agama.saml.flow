@@ -16,4 +16,5 @@ idpMap | ex = Call samlService getIdps
 Log "@info " idpMap
 // Display SAML IDP Discovery Page
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
-Log "@ " __________
+// Log extIdpData.extIdpRedirectUrl
+Log "@info " extIdpData.extIdpRedirectUrl
