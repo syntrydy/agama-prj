@@ -17,12 +17,12 @@ Log "@info " idpMap
 // Map idpMap
 idpMapData = {idpData: idpMap}
 // Display SAML IDP Discovery Page
-extIdpData = RRF "saml-idp-discovery.ftlh" idpMapData
+extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Log extIdpData.extIdpRedirectUrl
 Log "@info " extIdpData.extIdpRedirectUrl
 // Redirect to External IDP 
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
 // Log external IDP result
 Log "@info " extResult
-it_prkxu = undefined
-Finish it_prkxu
+it_rlkrb = undefined
+Finish it_rlkrb
