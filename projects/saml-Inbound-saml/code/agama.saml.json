@@ -473,7 +473,8 @@
 						"kcConf.password,",
 						"kcConf.spMetadataUrl,",
 						"kcConf.tokenUrl,",
-						"kcConf.idpUrl"
+						"kcConf.idpUrl",
+						"kcConf.extIDPTokenUrl"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "samlService",
@@ -484,7 +485,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": -664.7228192728081,
@@ -580,7 +581,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1086.374184970133,
 				"y": -2.9483127901957573
@@ -816,8 +817,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1148,
-		"y": 160,
+		"x": 1092,
+		"y": 213,
 		"zoom": 0.75
 	}
 }
