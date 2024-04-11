@@ -7,7 +7,7 @@ Log "@info Calling SAML service"
 // Log kcConf properties
 Log "@info " kcConf.serverUrl kcConf.realm kcConf.clientId
 // Create instance of SamlService
-samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serverUrl  kcConf.realm  kcConf.clientId  kcConf.clientSecret  kcConf.grantType  kcConf.scope  kcConf.username  kcConf.password  kcConf.spMetadataUrl  kcConf.tokenUrl  kcConf.idpUrl
+samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serverUrl  kcConf.realm  kcConf.clientId  kcConf.clientSecret  kcConf.grantType  kcConf.scope  kcConf.username  kcConf.password  kcConf.spMetadataUrl  kcConf.tokenUrl  kcConf.idpUrl kcConf.extIDPTokenUrl
 // Log samlService instance
 Log "@info " samlService
 // Get All IDP Details
@@ -24,5 +24,5 @@ Log "@info " extIdpData.extIdpRedirectUrl
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
 // Log external IDP result
 Log "@info " extResult
-it_rlkrb = undefined
-Finish it_rlkrb
+it_qsrhl = undefined
+Finish it_qsrhl
