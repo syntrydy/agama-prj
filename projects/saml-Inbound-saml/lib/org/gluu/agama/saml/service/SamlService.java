@@ -40,13 +40,16 @@ public class SamlService {
     private String extIDPTokenUrl;
 
     private SamlClient samlClient = new SamlClient();
-    private SamlConfig samlConfig ;
+    private SamlConfig samlConfig;
     private SamlUtil samlUtil = new SamlUtil();
 
     public SamlService(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
-            String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl, String extIDPTokenUrl) {
-        logger.error("Get  serverUrl:{}, realm:{}, clientId:{}, clientSecret:{}, grantType:{}, scope:{}, username:{}, password:{}, spMetadataUrl:{}, tokenUrl:{}, idpUrl:{}, extIDPTokenUrl:{}", serverUrl,
-                realm, clientId, clientSecret, grantType, scope, username, password, spMetadataUrl, tokenUrl, idpUrl, extIDPTokenUrl);
+            String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl,
+            String extIDPTokenUrl) {
+        logger.error(
+                "Get  serverUrl:{}, realm:{}, clientId:{}, clientSecret:{}, grantType:{}, scope:{}, username:{}, password:{}, spMetadataUrl:{}, tokenUrl:{}, idpUrl:{}, extIDPTokenUrl:{}",
+                serverUrl, realm, clientId, clientSecret, grantType, scope, username, password, spMetadataUrl, tokenUrl,
+                idpUrl, extIDPTokenUrl);
 
         this.serverUrl = serverUrl;
         this.realm = realm;
@@ -59,36 +62,11 @@ public class SamlService {
         this.spMetadataUrl = spMetadataUrl;
         this.tokenUrl = tokenUrl;
         this.idpUrl = idpUrl;
-        this. extIDPTokenUrl = extIDPTokenUrl;
-        
-        this.samlConfig = new SamlConfig(serverUrl, realm, clientId, clientSecret, grantType,
-                scope, username, password,  spMetadataUrl,  tokenUrl,  idpUrl,  extIDPTokenUrl);
+        this.extIDPTokenUrl = extIDPTokenUrl;
+
+        this.samlConfig = new SamlConfig(serverUrl, realm, clientId, clientSecret, grantType, scope, username, password,
+                spMetadataUrl, tokenUrl, idpUrl, extIDPTokenUrl);
         logger.error("SamlService instance created - samlConfig:{} ", samlConfig);
-    }
-    
-    public Map<String, List> getIdps() throws JsonProcessingException{
-        logger.info("getHardcodedIdp() ");
-        Map<String, List> idpMap = new HashMap<>();
-        
-        List<IdentityProvider> idpList = getIdpList();
-        logger.info("idpList:{}", idpList);
-        idpMap.put("idps", idpList);
-        logger.info("Returning IDP details idpMap:{}", idpMap);
-        return idpMap;
-    }
-
-    public Map<String, String> getIdpMap() throws JsonProcessingException {
-
-        logger.info("Fetch All IDP details");
-        String token = getToken();
-        logger.info("Access token:{}", token);
-
-        String idpJsonString = samlClient.getAllIdp(samlUtil.getIdpUrl(this.serverUrl, this.idpUrl, this.realm), token);
-        logger.info("Returning IDP details idpJsonString:{}", idpJsonString);
-        Map<String, String> idpMap = createIdentityProviderMap(idpJsonString);
-        logger.info("Returning IDP details idpMap:{}", idpMap);
-
-        return idpMap;
     }
 
     public List<IdentityProvider> getIdpList() throws JsonProcessingException {
@@ -97,69 +75,58 @@ public class SamlService {
         String token = getToken();
         logger.info("Access token:{}", token);
 
-        String idpJsonString = samlClient.getAllIdp(samlUtil.getIdpUrl(this.serverUrl, this.idpUrl, this.realm), token);
-        logger.info("Returning IDP details idpJsonString:{}", idpJsonString);
+        String idpUrl = samlUtil.getIdpUrl(this.serverUrl, this.idpUrl, this.realm);
+        String idpJsonString = samlClient.getAllIdp(idpUrl, token);
+        logger.info("\n Returning IDP details idpJsonString:{}", idpJsonString);
         List<IdentityProvider> idpList = createIdentityProviderList(idpJsonString);
         logger.info("Returning IDP details idpList:{}", idpList);
 
         return idpList;
     }
-    
+
+    private List<IdentityProvider> getIdpDetails(String idpUrl, List<IdentityProvider> idpList)
+            throws JsonProcessingException, IOException {
+
+        logger.info("Fetch IDP details - idpUrl:{}, idpList:{} ", idpUrl, idpList);
+        String token = getToken();
+        logger.info("Access token:{}", token);
+
+        if (idpList == null || idpList.isEmpty()) {
+            return idpList;
+        }
+
+        for (IdentityProvider idp : idpList) {
+            logger.info("Fetch IDP details for idp:{}", idp);
+            String json = samlClient.getIdpDetails(idpUrl, idp.getAlias(), token);
+            logger.info("IDP json:{}", json);
+            idp = this.createIdentityProvider(json);
+        }
+
+        return idpList;
+    }
+
     public String getExtIDPToken(String idpAlias) throws JsonProcessingException {
 
-        logger.info("Fetch Ext IDP Response for idpAlias:{} ",idpAlias);
+        logger.info("Fetch Ext IDP Response for idpAlias:{} ", idpAlias);
         String token = getToken();
         logger.info("Token for IDP response is :{}", token);
 
         String url = samlUtil.getExtIDPTokenUrl(this.serverUrl, this.extIDPTokenUrl, this.realm, idpAlias);
         logger.info("URL for Ext IDP response is :{}", url);
-        
+
         String idpJsonString = samlClient.getExtIDPTokenResponse(url, token);
         logger.info("Returning Ext IDP Response details idpJsonString:{}", idpJsonString);
-
 
         return idpJsonString;
     }
 
-    public String getToken() throws JsonProcessingException {
+    private String getToken() throws JsonProcessingException {
         logger.info("Fetch Token for client");
         String token = samlClient.getAccessToken(samlUtil.getTokenUrl(this.serverUrl, this.tokenUrl, this.realm),
                 this.clientId, this.clientSecret, this.grantType, this.scope, this.username, this.password,
                 this.serverUrl);
         logger.info("Access token:{}", token);
         return token;
-    }
-
-    private Map<String, String> createIdentityProviderMap(String jsonIdentityProviderList)
-            throws JsonProcessingException {
-        logger.info("jsonIdentityProviderList:{}", jsonIdentityProviderList);
-        Map<String, String> idpMap = null;
-        if (StringUtils.isBlank(jsonIdentityProviderList)) {
-            return idpMap;
-        }
-
-        JSONArray jsonArray = new JSONArray(jsonIdentityProviderList);
-        int count = jsonArray.length(); // get totalCount of all jsonObjects
-        idpMap = new HashMap<>();
-        for (int i = 0; i < count; i++) { // iterate through jsonArray
-            JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
-            logger.info(" i:{}, jsonObject:{}", i, jsonObject);
-            if (jsonObject != null) {
-                String jsonIdentityProvider = jsonObject.toString();
-                logger.info(" jsonIdentityProvider:{}", jsonIdentityProvider);
-
-                String alias = Jackson.getElement(jsonIdentityProvider, "alias");
-                String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
-                String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
-                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName, singleSignOnServiceUrl);
-
-                if (StringUtils.isNotBlank(alias)) {
-                    idpMap.put(alias, alias);
-                }
-            }
-        }
-        logger.info("idpMap:{}", idpMap);
-        return idpMap;
     }
 
     private List<IdentityProvider> createIdentityProviderList(String jsonIdentityProviderList)
@@ -187,19 +154,14 @@ public class SamlService {
                 String displayName = Jackson.getElement(jsonIdentityProvider, "displayName");
                 logger.info(" i:{},displayName:{}", i, displayName);
 
-                String singleSignOnServiceUrl = Jackson.getElement(jsonIdentityProvider, "singleSignOnServiceUrl");
-                logger.info(" i:{},singleSignOnServiceUrl:{}", i, singleSignOnServiceUrl);
-
-                logger.info(" i:{},alias:{}, displayName:{}, singleSignOnServiceUrl:{}", i, alias, displayName,
-                        singleSignOnServiceUrl);
-                logger.info(" i:{},alias:{}, displayName:{}", i, alias, displayName);
+                String internalId = Jackson.getElement(jsonIdentityProvider, "internalId");
+                logger.info(" i:{},internalId:{}", i, internalId);
 
                 idp = new IdentityProvider();
                 if (StringUtils.isNotBlank(alias)) {
                     idp.setAlias(alias);
                     idp.setDisplayName(displayName);
-                    idp.setSingleSignOnServiceUrl(singleSignOnServiceUrl);
-
+                    idp.setInternalId(internalId);
                     idpList.add(idp);
                 }
             }
@@ -207,7 +169,19 @@ public class SamlService {
         logger.info("Finally idpList:{}", idpList);
         return idpList;
     }
-    
-    
+
+    private IdentityProvider createIdentityProvider(String jsonIdentityProvider)
+            throws JsonProcessingException, IOException {
+        logger.info("jsonIdentityProvider:{}", jsonIdentityProvider);
+        IdentityProvider idp = null;
+        if (StringUtils.isBlank(jsonIdentityProvider)) {
+            return idp;
+        }
+
+        idp = Jackson.getObject(jsonIdentityProvider, idp);
+        logger.info("idp:{}", idp);
+
+        return idp;
+    }
 
 }
