@@ -42,7 +42,7 @@ public class SamlClient {
 
     public static String getAccessToken(final String tokenUrl, final String clientId, final String clientSecret,
             final String grantType, final String scope, final String username, final String password,
-            final String serverUrl)  throws JsonProcessingException {
+            final String serverUrl) throws JsonProcessingException {
         logger.info("Get  tokenUrl:{}, clientId:{}, grantType:{}, scope:{}, username:{}, serverUrl:{}", tokenUrl,
                 clientId, grantType, scope, username, serverUrl);
 
@@ -109,7 +109,39 @@ public class SamlClient {
 
         return identityProviderJsonList;
     }
-    
+
+    public String getIdpDetails(String idpUrl, String alias, String token) {
+        logger.info(" Get one IDP detail - idpUrl:{}, alias:{}, token:{}", idpUrl, alias, token);
+
+        String idpAliasUrl = idpUrl + "/" + alias;
+        logger.info(" For IDP - alias:{}, idpAliasUrl:{}", alias, idpAliasUrl);
+
+        Builder client = getClientBuilder(idpAliasUrl);
+        client.header(CONTENT_TYPE, MediaType.APPLICATION_JSON);
+        client.header(AUTHORIZATION, BEARER + token);
+        Response response = client.get();
+        logger.debug("All IDP detail - alias:{}, response:{}", alias, response);
+
+        String identityProviderJsonList = null;
+        if (response != null) {
+            logger.info(
+                    "alias:{} IDP response.getStatus():{}, response.getStatusInfo():{}, response.getEntity().getClass():{}",
+                    alias, response.getStatus(), response.getStatusInfo(), response.getEntity().getClass());
+            String entity = response.readEntity(String.class);
+            logger.info("Get IDP entity:{}", entity);
+            if (response.getStatusInfo().equals(Status.OK)) {
+
+                identityProviderJsonList = entity;
+                logger.info("alias:{}  IDP - identityProviderJsonList:{}", alias, identityProviderJsonList);
+            } else {
+                throw new WebApplicationException("Error while fetching details of alias" + alias + " IDP is "
+                        + response.getStatusInfo() + " - " + entity, response);
+            }
+        }
+
+        return identityProviderJsonList;
+    }
+
     public String getExtIDPTokenResponse(String extIdpUrl, String token) {
         logger.info(" Get Ext IDP Token Response - extIdpUrl:{}, token:{}", extIdpUrl, token);
         Builder client = getClientBuilder(extIdpUrl);
@@ -136,9 +168,8 @@ public class SamlClient {
         }
 
         return responseData;
-        
+
     }
-    
 
     private static Builder getClientBuilder(String url) {
         return ClientBuilder.newClient().target(url).request();
