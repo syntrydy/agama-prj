@@ -27,15 +27,16 @@
 		  <input type="hidden" id="extIdpRedirectUrl" name="extIdpRedirectUrl">
 		  <div class="relative mb-2">
 			[#list idps as idp]
-		<b>${idp.alias}
-		</b>
-		${idp.displayName}
-		<br>
-		${idp.singleSignOnServiceUrl}
-		<br>
-			&lt;#assign extIdpUrl&gt;${idp.singleSignOnServiceUrl}<!--#assign-->
-            <a href="${extIdpUrl}" onclick="showLink(this)" rel="link">${idp.alias}</a>
-		[/#list]
+			<b>${idp.alias}
+			</b>
+			${idp.displayName}
+			<br>
+			${idp.singleSignOnServiceUrl}
+			<br>
+			&lt;#assign internalId&gt;${idp.internalId}
+			<!--#assign-->
+			<a href="${internalId}" rel="link">${idp.alias}</a>
+			[/#list]
 		  </div>
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-center items-center">
@@ -45,7 +46,6 @@
 			</div>
 		  </div>
 		</form>
-		
 	  </div>
 	</div>
   
@@ -58,14 +58,11 @@
 	  form.onsubmit = handleFormValidation;
 	};
 	function handleFormValidation() {
-		
 	  return true
 	}
-	
 	function showLink(thisLink){
-
-alert(thisLink.innerHTML);
-
-}
+	  alert(thisLink.innerHTML);
+	  alert(thisLink.value);
+	}
   </script>
 </html>
