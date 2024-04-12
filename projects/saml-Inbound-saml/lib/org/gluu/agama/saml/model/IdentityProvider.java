@@ -10,51 +10,40 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IdentityProvider implements Serializable {
 
-
     private static final long serialVersionUID = -1475615134050618334L;
 
-    private String alias;
-
-    private String displayName;
-
-    private String description;
-        
-    private String realm;
-
-    private String signingCertificate;
+    protected String alias;
     
-    private String validateSignature;
-       
-    private String singleLogoutServiceUrl;  
+    protected String displayName;
     
-    private String nameIDPolicyFormat;
+    protected String internalId;
     
-    private String idpEntityId;
+    protected String providerId;
     
-    private String singleSignOnServiceUrl;
+    protected boolean enabled = true;
     
-    private String encryptionPublicKey;
-    
-    private String providerId;
-
     protected boolean trustEmail;
-
+    
     protected boolean storeToken;
-
+    
     protected boolean addReadTokenRoleOnCreate;
-
+    
     protected boolean authenticateByDefault;
-
+    
     protected boolean linkOnly;
-
+    
     protected String firstBrokerLoginFlowAlias;
-
+    
     protected String postBrokerLoginFlowAlias;
+    
+    protected Map<String, String> config = new HashMap<>();
 
     public String getAlias() {
         return alias;
@@ -72,76 +61,12 @@ public class IdentityProvider implements Serializable {
         this.displayName = displayName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getInternalId() {
+        return internalId;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getRealm() {
-        return realm;
-    }
-
-    public void setRealm(String realm) {
-        this.realm = realm;
-    }
-
-    public String getSigningCertificate() {
-        return signingCertificate;
-    }
-
-    public void setSigningCertificate(String signingCertificate) {
-        this.signingCertificate = signingCertificate;
-    }
-
-    public String getValidateSignature() {
-        return validateSignature;
-    }
-
-    public void setValidateSignature(String validateSignature) {
-        this.validateSignature = validateSignature;
-    }
-
-    public String getSingleLogoutServiceUrl() {
-        return singleLogoutServiceUrl;
-    }
-
-    public void setSingleLogoutServiceUrl(String singleLogoutServiceUrl) {
-        this.singleLogoutServiceUrl = singleLogoutServiceUrl;
-    }
-
-    public String getNameIDPolicyFormat() {
-        return nameIDPolicyFormat;
-    }
-
-    public void setNameIDPolicyFormat(String nameIDPolicyFormat) {
-        this.nameIDPolicyFormat = nameIDPolicyFormat;
-    }
-
-    public String getIdpEntityId() {
-        return idpEntityId;
-    }
-
-    public void setIdpEntityId(String idpEntityId) {
-        this.idpEntityId = idpEntityId;
-    }
-
-    public String getSingleSignOnServiceUrl() {
-        return singleSignOnServiceUrl;
-    }
-
-    public void setSingleSignOnServiceUrl(String singleSignOnServiceUrl) {
-        this.singleSignOnServiceUrl = singleSignOnServiceUrl;
-    }
-
-    public String getEncryptionPublicKey() {
-        return encryptionPublicKey;
-    }
-
-    public void setEncryptionPublicKey(String encryptionPublicKey) {
-        this.encryptionPublicKey = encryptionPublicKey;
+    public void setInternalId(String internalId) {
+        this.internalId = internalId;
     }
 
     public String getProviderId() {
@@ -150,6 +75,14 @@ public class IdentityProvider implements Serializable {
 
     public void setProviderId(String providerId) {
         this.providerId = providerId;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     public boolean isTrustEmail() {
@@ -208,18 +141,26 @@ public class IdentityProvider implements Serializable {
         this.postBrokerLoginFlowAlias = postBrokerLoginFlowAlias;
     }
 
+    public Map<String, String> getConfig() {
+        return config;
+    }
+
+    public void setConfig(Map<String, String> config) {
+        this.config = config;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
     @Override
     public String toString() {
-        return "IdentityProvider [alias=" + alias + ", displayName=" + displayName + ", description=" + description
-                + ", realm=" + realm + ", signingCertificate=" + signingCertificate + ", validateSignature="
-                + validateSignature + ", singleLogoutServiceUrl=" + singleLogoutServiceUrl + ", nameIDPolicyFormat="
-                + nameIDPolicyFormat + ", idpEntityId=" + idpEntityId + ", singleSignOnServiceUrl="
-                + singleSignOnServiceUrl + ", encryptionPublicKey=" + encryptionPublicKey + ", providerId=" + providerId
-                + ", trustEmail=" + trustEmail + ", storeToken=" + storeToken + ", addReadTokenRoleOnCreate="
-                + addReadTokenRoleOnCreate + ", authenticateByDefault=" + authenticateByDefault + ", linkOnly="
-                + linkOnly + ", firstBrokerLoginFlowAlias=" + firstBrokerLoginFlowAlias + ", postBrokerLoginFlowAlias="
-                + postBrokerLoginFlowAlias + "]";
+        return "IdentityProvider [alias=" + alias + ", displayName=" + displayName + ", internalId=" + internalId
+                + ", providerId=" + providerId + ", enabled=" + enabled + ", trustEmail=" + trustEmail + ", storeToken="
+                + storeToken + ", addReadTokenRoleOnCreate=" + addReadTokenRoleOnCreate + ", authenticateByDefault="
+                + authenticateByDefault + ", linkOnly=" + linkOnly + ", firstBrokerLoginFlowAlias="
+                + firstBrokerLoginFlowAlias + ", postBrokerLoginFlowAlias=" + postBrokerLoginFlowAlias + ", config="
+                + config + "]";
     }
-    
-      
+
 }
