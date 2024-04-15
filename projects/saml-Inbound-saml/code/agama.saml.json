@@ -278,7 +278,7 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n    \"serverUrl\": \"https://pujavs-advanced-ewe.gluu.info/kc\",\n    \"realm\": \"jans\",\n    \"clientId\": \"jans-4a85d4ba-8057-4d94-a045-0c98007f2c8f\",\n    \"clientSecret\": \"042e7016ecaba96e64b6\",\n    \"grantType\": \"PASSWORD\",\n    \"scope\": \"openid\",\n    \"username\": \"jans\",\n    \"password\": \"2d72acff7b8d2762035c\",\n    \"spMetadataUrl\": \"/realms/%s/broker/%s/endpoint/descriptor\",\n    \"tokenUrl\": \"/realms/%s/protocol/openid-connect/token\",\n    \"idpUrl\": \"/admin/realms/%s/identity-provider/instances\",\n    \"extIDPTokenUrl\": \"/realms/%s/broker/%s/token\"\n  }",
+					"configParams": "{\n   \"serverUrl\":\"https://pujavs-advanced-ewe.gluu.info/kc\",\n  \"realm\": \"jans\",\n  \"clientId\": \"jans-307f57ee-8978-4426-8405-137e64bc4754\",\n  \"clientSecret\": \"ea98a240e6e0e4ebb397\",\n  \"grantType\": \"PASSWORD\",\n  \"scope\": \"openid\",\n  \"username\": \"jans\",\n  \"password\": \"7fc7acafcd063ba576a9\",  \n  \"spMetadataUrl\":\"/realms/%s/broker/%s/endpoint/descriptor\",\n  \"tokenUrl\":\"/realms/%s/protocol/openid-connect/token\",\n  \"idpUrl\":\"/admin/realms/%s/identity-provider/instances\",\n  \"extIDPTokenUrl\": \"/realms/%s/broker/%s/token\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "500",
 					"inputs": "",
@@ -291,7 +291,7 @@
 				"x": -1381.1453483126543,
 				"y": -178.182383233177
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -1381.1453483126543,
 				"y": -178.182383233177
@@ -485,7 +485,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": -664.7228192728081,
@@ -817,8 +817,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1092,
-		"y": 213,
+		"x": 1054,
+		"y": 218,
 		"zoom": 0.75
 	}
 }
