@@ -24,5 +24,5 @@ Log "@info " extIdpData.extIdpRedirectUrl
 exTReuslt = RFAC extIdpData.extIdpRedirectUrl
 // Log external IDP result
 Log "@info " extResult
-it_qsrhl = undefined
-Finish it_qsrhl
+it_zydss = undefined
+Finish it_zydss
