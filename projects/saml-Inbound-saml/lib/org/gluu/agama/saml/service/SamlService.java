@@ -68,6 +68,17 @@ public class SamlService {
                 spMetadataUrl, tokenUrl, idpUrl, extIDPTokenUrl);
         logger.error("SamlService instance created - samlConfig:{} ", samlConfig);
     }
+    
+    public Map<String, List> getIdps() throws JsonProcessingException{
+        logger.info("getHardcodedIdp() ");
+        Map<String, List> idpMap = new HashMap<>();
+        
+        List<IdentityProvider> idpList = getIdpList();
+        logger.info("idpList:{}", idpList);
+        idpMap.put("idps", idpList);
+        logger.info("Returning IDP details idpMap:{}", idpMap);
+        return idpMap;
+    }
 
     public List<IdentityProvider> getIdpList() throws JsonProcessingException {
 
@@ -139,7 +150,7 @@ public class SamlService {
 
         JSONArray jsonArray = new JSONArray(jsonIdentityProviderList);
         int count = jsonArray.length(); // get totalCount of all jsonObjects
-        idpList = new ArrayList<>();
+        idpList = new ArrayList<IdentityProvider>();
         IdentityProvider idp = null;
         for (int i = 0; i < count; i++) { // iterate through jsonArray
             JSONObject jsonObject = jsonArray.getJSONObject(i); // get jsonObject @ i position
