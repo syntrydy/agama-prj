@@ -172,7 +172,7 @@ public class SamlService {
                 if (StringUtils.isNotBlank(alias)) {
                     idp.setAlias(alias);
                     idp.setDisplayName(displayName);
-                    idp.setInternalId(internalId);
+                   idp.setInternalId("123");
                     idpList.add(idp);
                 }
             }
