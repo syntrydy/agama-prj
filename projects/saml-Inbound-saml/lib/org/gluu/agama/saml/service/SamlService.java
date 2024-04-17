@@ -42,6 +42,13 @@ public class SamlService {
     private SamlClient samlClient = new SamlClient();
     private SamlConfig samlConfig;
     private SamlUtil samlUtil = new SamlUtil();
+    
+    public SamlService() {
+        logger.error( "SamlService constructor");
+        logger.error(" this.serverUrl :{}", this.serverUrl);
+        
+        logger.error(" samlClient :{}", samlClient);
+    }
 
     public SamlService(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
             String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl,
