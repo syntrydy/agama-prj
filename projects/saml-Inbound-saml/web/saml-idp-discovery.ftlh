@@ -26,6 +26,7 @@
 		<form method="post" class="my-8">
 		  <input type="hidden" id="extIdpRedirectUrl" name="extIdpRedirectUrl">
 		  <div class="relative mb-2">
+			[#if idps?has_content]
 			[#list idps as idp]
 			<b>${idp.alias}
 			</b>
@@ -36,6 +37,7 @@
 			&lt;#assign internalId&gt;${idp.internalId}
 			<!--#assign-->
 			<a href="${internalId}" rel="link">${idp.alias}</a>
+			[/#if]
 			[/#list]
 		  </div>
 		  <div class="space-y-9">
