@@ -34,9 +34,8 @@
 			<br>
 			${idp.singleSignOnServiceUrl}
 			<br>
-			&lt;#assign internalId&gt;${idp.internalId}
-			<!--#assign-->
-			<a href="${internalId}" rel="link">${idp.alias}</a>
+
+			<a href="${idp.alias}" rel="link">${idp.alias}</a>
 			[/#if]
 			[/#list]
 		  </div>
