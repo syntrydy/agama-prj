@@ -28,15 +28,16 @@
 		  <div class="relative mb-2">
 			[#if idps?size&gt;0]
 			[#list idps as idp]
-			<a href="${idp.alias}" onclick="doClick(this); return false;">${idp.alias}</a>
+			  <button type="submit" value="${idp.alias}" onclick="doClick(this);" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+				${idp.alias}
+			  </button>
+			<a href="${idp.alias}">${idp.alias}</a>
 			[/#list]
 			[/#if]
 		  </div>
-		  
-		  </form></div>
-		
+		</form>
 	  </div>
-	
+	</div>
   
   
 </body>
@@ -49,9 +50,9 @@
 	function handleFormValidation() {
 	  return true;
 	}
-	function doClick(thisLink){
-	  var idpValue = obj.getAttribute("href");
-	    alert(idpValue);
+	function doClick(obj){
+	  var idpValue = obj.value;
+	  alert(idpValue);
 	  alert(thisLink.innerHTML);
 	  document.getElementById("extIdpRedirectUrl").value = idpValue;
 	  document.getElementById("myForm").submit();
