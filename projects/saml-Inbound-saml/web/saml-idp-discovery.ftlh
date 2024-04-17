@@ -26,7 +26,7 @@
 		<form method="post" class="my-8">
 		  <input type="hidden" id="extIdpRedirectUrl" name="extIdpRedirectUrl">
 		  <div class="relative mb-2">
-			[#if idps?has_content]
+			[#if idps?size&gt;0]
 			[#list idps as idp]
 			<b>${idp.alias}
 			</b>
@@ -34,7 +34,6 @@
 			<br>
 			${idp.singleSignOnServiceUrl}
 			<br>
-
 			<a href="${idp.alias}" rel="link">${idp.alias}</a>
 			[/#if]
 			[/#list]
