@@ -31,8 +31,7 @@
 			<b>${idp.alias}
 			</b>
 			${idp.displayName}
-			<br>
-			${idp.singleSignOnServiceUrl}
+
 			<br>
 			<a href="${idp.alias}" rel="link">${idp.alias}</a>
 			[/#list]
