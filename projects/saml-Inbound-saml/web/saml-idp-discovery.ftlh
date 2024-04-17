@@ -35,8 +35,8 @@
 			${idp.singleSignOnServiceUrl}
 			<br>
 			<a href="${idp.alias}" rel="link">${idp.alias}</a>
-			[/#if]
 			[/#list]
+			[/#if]
 		  </div>
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-center items-center">
