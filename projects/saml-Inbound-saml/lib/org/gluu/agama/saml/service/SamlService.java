@@ -46,8 +46,6 @@ public class SamlService {
     public SamlService() {
         logger.error( "SamlService constructor");
         logger.error(" this.serverUrl :{}", this.serverUrl);
-        
-        logger.error(" samlClient :{}", samlClient);
     }
 
     public SamlService(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
