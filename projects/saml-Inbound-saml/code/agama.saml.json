@@ -500,7 +500,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -675.6871711863756,
 				"y": 213.83000483758303
@@ -551,7 +551,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "extIDPUrl"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -565,8 +566,8 @@
 			"height": 123,
 			"id": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
 			"position": {
-				"x": -997.6871711863757,
-				"y": 217.83000483758315
+				"x": -996.3538378530425,
+				"y": 215.16333817091652
 			},
 			"type": "rfac",
 			"data": {
@@ -577,8 +578,8 @@
 				"inRepeatBlock": "",
 				"inIterateBlock": "",
 				"position": {
-					"x": -997.6871711863757,
-					"y": 217.83000483758315
+					"x": -996.3538378530425,
+					"y": 215.16333817091652
 				},
 				"agamaData": {
 					"id": "Agama-rfac-Node-d6d0f106-8b2a-4923-a380-8d7609d3475b",
@@ -591,15 +592,15 @@
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish.gluu.info",
+					"idpAuthEndpoint": "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&response_type=code&kc_idp_hint=busy-starfish.gluu.info",
 					"assignCallbackResult": "extIdpResponse"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": -997.6871711863757,
-				"y": 217.83000483758315
+				"x": -996.3538378530425,
+				"y": 215.16333817091652
 			},
 			"dragging": false,
 			"parentId": "Agama-call-Node-e25fd39f-5d39-49aa-b45b-1cd9d314cdb5",
