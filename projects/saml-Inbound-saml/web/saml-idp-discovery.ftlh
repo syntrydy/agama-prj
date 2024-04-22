@@ -29,8 +29,8 @@
 			[#if idps?size&gt;0]
 			[#list idps as idp]
 			<button type="submit" value="${idp.alias}" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
-			  ${idp.alias}
 			</button>
+			<br>
 			<a href="${idp.alias}">${idp.alias}</a>
 			[/#list]
 			[/#if]
