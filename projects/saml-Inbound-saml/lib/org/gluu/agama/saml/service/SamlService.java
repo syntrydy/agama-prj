@@ -42,9 +42,9 @@ public class SamlService {
     private SamlClient samlClient = new SamlClient();
     private SamlConfig samlConfig;
     private SamlUtil samlUtil = new SamlUtil();
-    
+
     public SamlService() {
-        logger.error( "SamlService constructor");
+        logger.error("SamlService constructor");
         logger.error(" this.serverUrl :{}", this.serverUrl);
     }
 
@@ -73,19 +73,19 @@ public class SamlService {
                 spMetadataUrl, tokenUrl, idpUrl, extIDPTokenUrl);
         logger.error("SamlService instance created - samlConfig:{} ", samlConfig);
     }
-    
-    public Map<String, List> getIdps() throws JsonProcessingException{
-        logger.info("getHardcodedIdp() ");
+
+    public Map<String, List> getIdps() throws JsonProcessingException {
+        logger.info("Get All idp ");
         Map<String, List> idpMap = new HashMap<>();
-        
+
         List<IdentityProvider> idpList = getIdpList();
         logger.info("idpList:{}", idpList);
         idpMap.put("idps", idpList);
         logger.info("Returning IDP details idpMap:{}", idpMap);
         return idpMap;
     }
-
-    public List<IdentityProvider> getIdpList() throws JsonProcessingException {
+    
+    private List<IdentityProvider> getIdpList() throws JsonProcessingException {
 
         logger.info("Fetch All IDP details");
         String token = getToken();
@@ -98,6 +98,38 @@ public class SamlService {
         logger.info("Returning IDP details idpList:{}", idpList);
 
         return idpList;
+    }
+    
+    public Map<String, Object> getIdpData(String idpAlias) throws JsonProcessingException, IOException {
+        logger.info("Get External IDP Data idpAlias:{}",idpAlias);
+        Map<String, Object> idpData = new HashMap<>();
+
+        IdentityProvider idp = getIdpDetails(idpAlias);
+        logger.info("idp:{}", idp);
+        idpData.put("idp", idp);
+        idpData.put("idpUrl", "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish.gluu.info");
+        logger.info("Returning IDP details idpData:{}", idpData);
+        return idpData;
+    }
+
+    private IdentityProvider getIdpDetails(String idpAlias) throws JsonProcessingException, IOException {
+
+        logger.info("Fetch IDP details - idpAlias:{}, this.idpUrl:{}, samlConfig.getIdpUrl():{} ", idpAlias,
+                this.idpUrl, samlConfig.getIdpUrl());
+        String token = getToken();
+        logger.info("Access token:{}", token);
+        IdentityProvider idp = null;
+        if (StringUtils.isBlank(idpAlias)) {
+            return idp;
+        }
+
+        logger.info("Fetch IDP details for idp:{}", idp);
+        String json = samlClient.getIdpDetails(this.idpUrl, idpAlias, token);
+        logger.info("IDP json:{}", json);
+        idp = this.createIdentityProvider(json);
+        logger.info("IDP idpAlias:{}, idp:{}", idpAlias, idp);
+
+        return idp;
     }
 
     private List<IdentityProvider> getIdpDetails(String idpUrl, List<IdentityProvider> idpList)
@@ -177,7 +209,7 @@ public class SamlService {
                 if (StringUtils.isNotBlank(alias)) {
                     idp.setAlias(alias);
                     idp.setDisplayName(displayName);
-                   idp.setInternalId("123");
+                    idp.setInternalId("123");
                     idpList.add(idp);
                 }
             }
