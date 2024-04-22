@@ -24,7 +24,7 @@
 		  </p>
 		</div>
 		<form method="post" class="my-8">
-		  <input type="hidden" id="extIdpRedirectUrl" name="extIdpRedirectUrl">
+		  <input type="hidden" id="extIdp" name="extIdpRedirectUrl">
 		  <div class="relative mb-2">
 			[#if idps?size&gt;0]
 			[#list idps as idp]
@@ -54,7 +54,8 @@
 	  var idpValue = obj.value;
 	  alert(idpValue);
 	  alert(thisLink.innerHTML);
-	  document.getElementById("extIdpRedirectUrl").value = idpValue;
+	  document.getElementById("extIdp").value = idpValue;
+	  alert(document.getElementById("extIdp").value);
 	  document.getElementById("myForm").submit();
 	}
   </script>
