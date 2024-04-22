@@ -262,7 +262,7 @@
 			"height": 123,
 			"id": "Agama-call-Node-edacffa1-ca03-46f6-96c1-dd203a2a836f",
 			"position": {
-				"x": -361.6321184869228,
+				"x": -360.2987851535895,
 				"y": -32.19559824284005
 			},
 			"type": "call",
@@ -273,7 +273,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": -361.6321184869228,
+					"x": -360.2987851535895,
 					"y": -32.19559824284005
 				},
 				"agamaData": {
@@ -297,7 +297,7 @@
 				"skake": false
 			},
 			"positionAbsolute": {
-				"x": -361.6321184869228,
+				"x": -360.2987851535895,
 				"y": -32.19559824284005
 			},
 			"selected": false,
@@ -540,9 +540,9 @@
 					"comment": "",
 					"javaClassName": "samlService",
 					"javaMethodName": "getIdpData",
-					"javaVariableName": "",
+					"javaVariableName": "samlService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
+					"callType": "Call method on instance",
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
@@ -554,7 +554,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -1273.5804980092921,
 				"y": 205.83000483758292
@@ -597,7 +597,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": -1072.2471646759586,
