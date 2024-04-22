@@ -18,12 +18,12 @@ Log "@info " idpMap
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Log extIdpData.extIdpRedirectUrl
 Log "@info " extIdpData.extIdp
-idpData = Call samlService#getIdpData extIdpData.extIdp
+idpData = Call samlService getIdpData extIdpData.extIdp
 // Log idpData
 Log "@info " idpData
 // Redirect to External IDP 
 extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_pdoew = undefined
-Finish it_pdoew
+it_cqofa = undefined
+Finish it_cqofa
