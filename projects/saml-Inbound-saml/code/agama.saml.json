@@ -595,7 +595,7 @@
 					"idpAuthEndpoint": "idpData.idpUrl",
 					"assignCallbackResult": "extIdpResponse"
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -844,8 +844,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1117,
-		"y": 221,
+		"x": 10,
+		"y": 216,
 		"zoom": 0.75
 	}
 }
