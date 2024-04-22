@@ -17,6 +17,8 @@ public class SamlConfig  implements Serializable {
     private String idpUrl;
     private String extIDPTokenUrl;
     
+    public SamlConfig() {}
+        
     public SamlConfig(String serverUrl, String realm, String clientId, String clientSecret, String grantType,
             String scope, String username, String password, String spMetadataUrl, String tokenUrl, String idpUrl, String extIDPTokenUrl) {
         this.serverUrl = serverUrl;
