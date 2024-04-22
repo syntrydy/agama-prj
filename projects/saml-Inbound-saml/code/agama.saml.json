@@ -535,11 +535,11 @@
 					"id": "Agama-call-Node-e25fd39f-5d39-49aa-b45b-1cd9d314cdb5",
 					"parentId": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 					"type": "Agama-call-Node",
-					"displayName": "",
+					"displayName": "Call getIdpData",
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "samlService",
-					"javaMethodName": "getIdpDetails",
+					"javaMethodName": "getIdpData",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
@@ -550,7 +550,7 @@
 						"extIdpData.idp"
 					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "extIDPUrl"
+					"asssignedVariableName": "idpData"
 				},
 				"skake": false
 			},
@@ -592,7 +592,7 @@
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&response_type=code&kc_idp_hint=busy-starfish.gluu.info",
+					"idpAuthEndpoint": "idpData.idpUrl",
 					"assignCallbackResult": "extIdpResponse"
 				},
 				"skake": true
