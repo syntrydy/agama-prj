@@ -18,10 +18,10 @@ Log "@info " idpMap
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Log extIdpData.extIdpRedirectUrl
 Log "@info " extIdpData.idp
-extIDPUrl = Call samlService#getIdpDetails extIdpData.idp
+idpData = Call samlService#getIdpData extIdpData.idp
 // Redirect to External IDP 
-extIdpResponse = RFAC https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&response_type=code&kc_idp_hint=busy-starfish.gluu.info
+extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_fjxis = undefined
-Finish it_fjxis
+it_gotzu = undefined
+Finish it_gotzu
