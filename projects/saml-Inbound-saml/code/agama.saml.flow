@@ -23,5 +23,5 @@ idpData = Call samlService#getIdpData extIdpData.idp
 extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_gotzu = undefined
-Finish it_gotzu
+it_wbsdo = undefined
+Finish it_wbsdo
