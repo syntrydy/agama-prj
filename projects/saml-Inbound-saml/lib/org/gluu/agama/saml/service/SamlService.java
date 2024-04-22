@@ -107,8 +107,11 @@ public class SamlService {
         IdentityProvider idp = getIdpDetails(idpAlias);
         logger.info("idp:{}", idp);
         idpData.put("idp", idp);
-        idpData.put("idpUrl", "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish.gluu.info");
-        logger.info("Returning IDP details idpData:{}", idpData);
+        //idpData.put("idpUrl", "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&redirect_uri=https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/account&response_type=code&kc_idp_hint=busy-starfish.gluu.info");
+        idpData.put("idpUrl", "https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754&redirect_uri=https://pujavs-advanced-ewe.gluu.info/jans-auth/fl/callback&response_type=code&kc_idp_hint=busy-starfish.gluu.info");
+        
+        String redirectUrl = getRedirectUrl(idp);
+        logger.info("Returning IDP details redirectUrl:{}, idpData:{}", redirectUrl, idpData);
         return idpData;
     }
 
@@ -230,6 +233,25 @@ public class SamlService {
         logger.info("idp:{}", idp);
 
         return idp;
+    }
+    
+    private String getRedirectUrl(IdentityProvider idp) {
+        logger.info("Create Redirect Url - idp:{}",idp );
+        //https://pujavs-advanced-ewe.gluu.info/kc/realms/jans/protocol/
+        //openid-connect/auth?client_id=jans-307f57ee-8978-4426-8405-137e64bc4754
+        //&redirect_uri=https://pujavs-advanced-ewe.gluu.info/jans-auth/agama.saml/callback&response_type=code&kc_idp_hint=busy-starfish.gluu.info"
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.idpUrl);
+        sb.append(this.realm);
+        sb.append("/protocol/openid-connect/auth");
+        sb.append("?client_id=");
+        sb.append(this.clientId);
+        sb.append("&redirect_uri=");
+        sb.append("https://pujavs-advanced-ewe.gluu.info/jans-auth/fl/callback");
+        
+        logger.info("Create Redirect Url - sb:{}",sb );
+        
+        return sb.toString();
     }
 
 }
