@@ -13,7 +13,7 @@ Log "@info " samlService
 // Get All IDP Details
 idpMap | ex = Call samlService getIdps 
 // Log IDP Map
-Log "@info " idpMap
+Log "@info Logging IDP's fetched %" $idpMap
 // Display SAML IDP Discovery Page
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Log extIdpData.extIdpRedirectUrl
@@ -25,5 +25,5 @@ Log "@info " idpData
 extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_okmrr = undefined
-Finish it_okmrr
+it_pamnw = undefined
+Finish it_pamnw
