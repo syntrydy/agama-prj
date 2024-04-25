@@ -5,7 +5,7 @@ Flow agama.saml
 // Calling SAML service
 Log "@info Calling SAML service"
 // Log kcConf properties
-Log "@info " kcConf.serverUrl kcConf.realm kcConf.clientId
+Log "@info " Conf details kcConf.serverUrl kcConf.realm kcConf.clientId
 // Create instance of SamlService
 samlService | ex = Call org.gluu.agama.saml.service.SamlService#new kcConf.serverUrl  kcConf.realm  kcConf.clientId  kcConf.clientSecret  kcConf.grantType  kcConf.scope  kcConf.username  kcConf.password  kcConf.spMetadataUrl  kcConf.tokenUrl  kcConf.idpUrl kcConf.extIDPTokenUrl
 // Log samlService instance
@@ -25,5 +25,5 @@ Log "@info " Redirecting to IDP - idpData
 External IDP response is -  extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_plrsg = undefined
-Finish it_plrsg
+it_kgbfe = undefined
+Finish it_kgbfe
