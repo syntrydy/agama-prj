@@ -20,10 +20,10 @@ extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 Log "@info " extIdpData.extIdp
 idpData = Call samlService getIdpData extIdpData.extIdp
 // Log idpData
-Log "@info " Redirecting to IDP $idpData 
+Log "@info " Redirecting to IDP idpData 
 // Redirect to External IDP 
 External IDP response is -  extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_nvkpz = undefined
-Finish it_nvkpz
+it_dcjxd = undefined
+Finish it_dcjxd
