@@ -87,8 +87,8 @@
 			"dragging": false
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
 			"position": {
 				"x": -651.1613320872011,
@@ -116,7 +116,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Logging IDP list fetched idpMap to be displayed in SAML discovery page",
+					"logMessage": "Logging IDP list fetched to be displayed in SAML discovery page is $idpMap ",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
@@ -124,9 +124,9 @@
 					"hasNoRepeat": false,
 					"hasRepeat": false
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -651.1613320872011,
 				"y": -5.392447843930597
@@ -643,7 +643,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -849.2187689930385,
 				"y": 218.0282693109126
