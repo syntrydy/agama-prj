@@ -91,8 +91,8 @@
 			"height": 120,
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
 			"position": {
-				"x": -488.4946654205345,
-				"y": -10.725781177263968
+				"x": -464.4946654205345,
+				"y": 1.2742188227360316
 			},
 			"type": "log",
 			"data": {
@@ -103,8 +103,8 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -488.4946654205345,
-					"y": -10.725781177263968
+					"x": -464.4946654205345,
+					"y": 1.2742188227360316
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
@@ -116,7 +116,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "IDP list  to be displayed in SAML discovery page ",
+					"logMessage": "idpMap",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
@@ -128,8 +128,8 @@
 			},
 			"selected": true,
 			"positionAbsolute": {
-				"x": -488.4946654205345,
-				"y": -10.725781177263968
+				"x": -464.4946654205345,
+				"y": 1.2742188227360316
 			},
 			"dragging": false
 		},
