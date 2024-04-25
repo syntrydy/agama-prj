@@ -25,5 +25,5 @@ Log "@info " Redirecting to IDP - idpData
 External IDP response is -  extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_kccyv = undefined
-Finish it_kccyv
+it_holvu = undefined
+Finish it_holvu
