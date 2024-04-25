@@ -87,11 +87,11 @@
 			"dragging": false
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
 			"position": {
-				"x": -646.5665386672129,
+				"x": -648.0981364738756,
 				"y": -20.708425910557764
 			},
 			"type": "log",
@@ -103,7 +103,7 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -646.5665386672129,
+					"x": -648.0981364738756,
 					"y": -20.708425910557764
 				},
 				"agamaData": {
@@ -116,7 +116,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "\"Logging IDP's fetched %\" $idpMap",
+					"logMessage": "Logging IDP list fetched idpMap",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
@@ -124,11 +124,11 @@
 					"hasNoRepeat": false,
 					"hasRepeat": false
 				},
-				"skake": false
+				"skake": true
 			},
 			"selected": true,
 			"positionAbsolute": {
-				"x": -646.5665386672129,
+				"x": -648.0981364738756,
 				"y": -20.708425910557764
 			},
 			"dragging": false
