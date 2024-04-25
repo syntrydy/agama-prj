@@ -139,7 +139,7 @@
 			"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
 			"position": {
 				"x": -1123.3405304778407,
-				"y": -187.8176167668229
+				"y": -186.48428343348954
 			},
 			"type": "log",
 			"data": {
@@ -150,7 +150,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": -1123.3405304778407,
-					"y": -187.8176167668229
+					"y": -186.48428343348954
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-5f9509a1-7649-4859-8aeb-2ea591aa9719",
@@ -171,7 +171,7 @@
 			"dragging": false,
 			"positionAbsolute": {
 				"x": -1123.3405304778407,
-				"y": -187.8176167668229
+				"y": -186.48428343348954
 			}
 		},
 		{
@@ -334,13 +334,13 @@
 					"comment": "Log kcConf properties",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "Conf details kcConf.serverUrl kcConf.realm kcConf.clientId",
+					"logMessage": "kcConf.serverUrl kcConf.realm kcConf.clientId",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -867.9775843839348,
 				"y": -188.11671501512737
@@ -554,7 +554,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1085.5804980092926,
 				"y": 205.63174036425357
@@ -907,8 +907,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 216,
+		"x": 1081,
+		"y": 162,
 		"zoom": 0.75
 	}
 }
