@@ -17,7 +17,7 @@ Log "@info " idpMap
 // Display SAML IDP Discovery Page
 extIdpData = RRF "saml-idp-discovery.ftlh" idpMap
 // Log extIdpData.extIdpRedirectUrl
-Log "@info " Selected IDP is - extIdpData.extIdp
+Log "@info " extIdpData.extIdp
 idpData = Call samlService getIdpData extIdpData.extIdp
 // Log idpData
 Log "@info " Redirecting to IDP - idpData 
@@ -25,5 +25,5 @@ Log "@info " Redirecting to IDP - idpData
 External IDP response is -  extIdpResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " extIdpResponse
-it_jyijv = undefined
-Finish it_jyijv
+it_zjjcm = undefined
+Finish it_zjjcm
