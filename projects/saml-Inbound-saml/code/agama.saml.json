@@ -49,7 +49,7 @@
 			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 			"position": {
 				"x": -1248.247164675959,
-				"y": -6.169995162417081
+				"y": -7.7015929690797975
 			},
 			"type": "log",
 			"data": {
@@ -61,7 +61,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": -1248.247164675959,
-					"y": -6.169995162417081
+					"y": -7.7015929690797975
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
@@ -73,7 +73,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "extIdpData.extIdp",
+					"logMessage": "Selected IDP is - extIdpData.extIdp",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -82,17 +82,17 @@
 			"selected": false,
 			"positionAbsolute": {
 				"x": -1248.247164675959,
-				"y": -6.169995162417081
+				"y": -7.7015929690797975
 			},
 			"dragging": false
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
 			"position": {
-				"x": -648.0981364738756,
-				"y": -20.708425910557764
+				"x": -651.1613320872011,
+				"y": -5.392447843930597
 			},
 			"type": "log",
 			"data": {
@@ -103,8 +103,8 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -648.0981364738756,
-					"y": -20.708425910557764
+					"x": -651.1613320872011,
+					"y": -5.392447843930597
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
@@ -116,7 +116,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Logging IDP list fetched idpMap",
+					"logMessage": "Logging IDP list fetched idpMap to be displayed in SAML discovery page",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
@@ -124,12 +124,12 @@
 					"hasNoRepeat": false,
 					"hasRepeat": false
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
-				"x": -648.0981364738756,
-				"y": -20.708425910557764
+				"x": -651.1613320872011,
+				"y": -5.392447843930597
 			},
 			"dragging": false
 		},
@@ -418,8 +418,8 @@
 			"height": 123,
 			"id": "Agama-rrf-Node-bf3732f9-a7f8-463d-8f83-4f7d52897885",
 			"position": {
-				"x": -937.7075183034665,
-				"y": -6.948312790195786
+				"x": -926.9863336568275,
+				"y": -6.948312790195757
 			},
 			"type": "rrf",
 			"data": {
@@ -430,8 +430,8 @@
 				"inRepeatBlock": "",
 				"inIterateBlock": "",
 				"position": {
-					"x": -937.7075183034665,
-					"y": -6.948312790195786
+					"x": -926.9863336568275,
+					"y": -6.948312790195757
 				},
 				"agamaData": {
 					"id": "Agama-rrf-Node-bf3732f9-a7f8-463d-8f83-4f7d52897885",
@@ -455,8 +455,8 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": -937.7075183034665,
-				"y": -6.948312790195786
+				"x": -926.9863336568275,
+				"y": -6.948312790195757
 			},
 			"dragging": false,
 			"parentId": "Agama-assignment-Node-fd48d076-cab6-4953-8ccc-77674a21f9d6",
@@ -517,7 +517,7 @@
 			"id": "Agama-call-Node-e25fd39f-5d39-49aa-b45b-1cd9d314cdb5",
 			"position": {
 				"x": -1273.5804980092921,
-				"y": 205.83000483758292
+				"y": 204.2984070309202
 			},
 			"type": "call",
 			"data": {
@@ -529,7 +529,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": -1273.5804980092921,
-					"y": 205.83000483758292
+					"y": 204.2984070309202
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-e25fd39f-5d39-49aa-b45b-1cd9d314cdb5",
@@ -557,7 +557,7 @@
 			"selected": false,
 			"positionAbsolute": {
 				"x": -1273.5804980092921,
-				"y": 205.83000483758292
+				"y": 204.2984070309202
 			},
 			"dragging": false
 		},
@@ -566,8 +566,8 @@
 			"height": 123,
 			"id": "Agama-log-Node-01c60fe8-b000-4896-8e20-dc523671091d",
 			"position": {
-				"x": -1072.2471646759586,
-				"y": 205.83000483758292
+				"x": -1067.6523712559706,
+				"y": 211.9563960642338
 			},
 			"type": "log",
 			"data": {
@@ -578,8 +578,8 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": -1072.2471646759586,
-					"y": 205.83000483758292
+					"x": -1067.6523712559706,
+					"y": 211.9563960642338
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-01c60fe8-b000-4896-8e20-dc523671091d",
@@ -591,7 +591,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "idpData",
+					"logMessage": "Redirecting to IDP - idpData ",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -600,8 +600,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": -1072.2471646759586,
-				"y": 205.83000483758292
+				"x": -1067.6523712559706,
+				"y": 211.9563960642338
 			}
 		},
 		{
@@ -636,14 +636,14 @@
 					"inIterateBlock": false,
 					"nodeIcon": "ic:baseline-insert-link",
 					"idpAuthEndpoint": "idpData.idpUrl",
-					"assignCallbackResult": "extIdpResponse",
+					"assignCallbackResult": "External IDP response is -  extIdpResponse",
 					"position": {
 						"x": -847.6871711863757
 					}
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -849.2187689930385,
 				"y": 218.0282693109126
