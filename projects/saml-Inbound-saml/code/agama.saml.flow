@@ -22,8 +22,8 @@ idpData = Call samlService getIdpData extIdpData.extIdp
 // Log idpData
 Log "@info " idpData.idpUrl
 // Redirect to External IDP 
-extIdpResponse = RFAC idpData.idpUrl
+samlResponse = RFAC idpData.idpUrl
 // Log external IDP result
-Log "@info " extIdpResponse
-it_ffiyc = undefined
-Finish it_ffiyc
+Log "@info " samlResponse
+it_olqor = undefined
+Finish it_olqor
