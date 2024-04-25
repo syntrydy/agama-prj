@@ -3,14 +3,14 @@
 		{
 			"width": 170,
 			"height": 123,
-			"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+			"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
 			"position": {
-				"x": -141.68717118637568,
-				"y": 197.83000483758298
+				"x": -168.3538378530423,
+				"y": 194.96507369758706
 			},
 			"type": "finish",
 			"data": {
-				"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+				"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
 				"type": "Agama-finish-Flow",
 				"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
 				"whenCondition": "WhenFalse",
@@ -18,11 +18,11 @@
 				"inIterateBlock": false,
 				"handles": [],
 				"position": {
-					"x": -141.68717118637568,
-					"y": 197.83000483758298
+					"x": -168.3538378530423,
+					"y": 194.96507369758706
 				},
 				"agamaData": {
-					"id": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
+					"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
 					"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
 					"type": "Agama-finish-Flow",
 					"hasSuccess": false,
@@ -31,17 +31,16 @@
 					"comment": "",
 					"flowfilename": "",
 					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
-					"nodeIcon": "material-symbols:line-end-square-rounded",
-					"displayName": "SAML IDP flow complete"
-				},
-				"skake": false
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
 			},
-			"selected": false,
+			"selected": true,
+			"dragging": false,
 			"positionAbsolute": {
-				"x": -141.68717118637568,
-				"y": 197.83000483758298
-			},
-			"dragging": false
+				"x": -168.3538378530423,
+				"y": 194.96507369758706
+			}
 		},
 		{
 			"width": 170,
@@ -340,7 +339,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -867.9775843839348,
 				"y": -188.11671501512737
@@ -469,7 +468,7 @@
 			"height": 123,
 			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
 			"position": {
-				"x": -368.3538378530423,
+				"x": -367.020504519709,
 				"y": 194.96507369758706
 			},
 			"type": "log",
@@ -481,7 +480,7 @@
 				"inRepeatBlock": "",
 				"inIterateBlock": "",
 				"position": {
-					"x": -368.3538378530423,
+					"x": -367.020504519709,
 					"y": 194.96507369758706
 				},
 				"agamaData": {
@@ -496,13 +495,17 @@
 					"inIterateBlock": false,
 					"logMessage": "samlResponse",
 					"logLevel": "info",
-					"nodeIcon": "octicon:log-16"
+					"nodeIcon": "octicon:log-16",
+					"hasSuccess": "",
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": -368.3538378530423,
+				"x": -367.020504519709,
 				"y": 194.96507369758706
 			},
 			"dragging": false,
@@ -793,23 +796,6 @@
 			}
 		},
 		{
-			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a-finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8-e2955fb5-4de6-4d06-b339-09a35ea728f1",
-			"type": "default",
-			"source": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
-			"target": "finish-866486b5-49b3-4431-91f4-2dc7b3a4b7b8",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#bee0d2",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			}
-		},
-		{
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53-Agama-assignment-Node-fd48d076-cab6-4953-8ccc-77674a21f9d6-1c499b15-aade-4548-bbdf-331507f1e5e4",
 			"type": "default",
 			"source": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
@@ -904,11 +890,28 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a-finish-dfdc11cb-a1cd-448d-980e-384d8ced8107-68393558-ef62-4b43-add6-3b93a74f1f09",
+			"type": "default",
+			"source": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+			"target": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 216,
+		"x": 669,
+		"y": 215,
 		"zoom": 0.75
 	}
 }
