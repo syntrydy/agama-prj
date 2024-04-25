@@ -116,7 +116,7 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "IDP list fetched to be displayed in SAML discovery page is idpMap ",
+					"logMessage": "IDP list fetched to be displayed in SAML discovery page ",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
