@@ -28,10 +28,9 @@
 		  <div class="relative mb-2">
 			[#if idps?size&gt;0]
 			[#list idps as idp]
-			<button type="submit" onclick="doClick(this)" value="${idp.alias}" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">${idp.alias}
+			<button type="submit" value="${idp.alias}" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">${idp.alias}
 			</button>
 			<br>
-		
 			[/#list]
 			[/#if]
 		  </div>
@@ -52,10 +51,11 @@
 	}
 	function doClick(obj){
 	  var idpValue = obj.value;
+	  alert("onClick()");
 	  alert(idpValue);
-	  alert(thisLink.innerHTML);
+		
 	  document.getElementById("extIdp").value = idpValue;
-	  alert(document.getElementById("extIdp").value);
+	
 	  document.getElementById("myForm").submit();
 	}
   </script>
