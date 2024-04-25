@@ -25,5 +25,5 @@ Log "@info " idpData.idpUrl
 samlResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " samlResponse
-it_olqor = undefined
-Finish it_olqor
+it_wynoa = undefined
+Finish it_wynoa
