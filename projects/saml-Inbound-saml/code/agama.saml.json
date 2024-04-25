@@ -44,8 +44,8 @@
 			"dragging": false
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 			"position": {
 				"x": -1056.247164675959,
@@ -77,9 +77,9 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -1056.247164675959,
 				"y": -9.034926302413112
@@ -562,12 +562,12 @@
 			"dragging": false
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-01c60fe8-b000-4896-8e20-dc523671091d",
 			"position": {
 				"x": -995.6523712559706,
-				"y": 203.9563960642338
+				"y": 202.62306273090053
 			},
 			"type": "log",
 			"data": {
@@ -579,7 +579,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": -995.6523712559706,
-					"y": 203.9563960642338
+					"y": 202.62306273090053
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-01c60fe8-b000-4896-8e20-dc523671091d",
@@ -591,17 +591,17 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Redirecting to IDP - idpData ",
+					"logMessage": "Redirecting to IDP $idpData ",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": -995.6523712559706,
-				"y": 203.9563960642338
+				"y": 202.62306273090053
 			}
 		},
 		{
