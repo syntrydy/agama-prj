@@ -25,5 +25,5 @@ Log "@info " idpData.idpUrl
 samlResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " samlResponse
-it_juoyt = undefined
-Finish it_juoyt
+it_krpey = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_krpey
