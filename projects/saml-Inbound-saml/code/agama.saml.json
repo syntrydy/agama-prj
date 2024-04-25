@@ -44,12 +44,12 @@
 			"dragging": false
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
 			"position": {
 				"x": -1056.247164675959,
-				"y": -7.7015929690797975
+				"y": -9.034926302413112
 			},
 			"type": "log",
 			"data": {
@@ -61,7 +61,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": -1056.247164675959,
-					"y": -7.7015929690797975
+					"y": -9.034926302413112
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-5314b2a8-f588-40d5-9457-6aee58e85d14",
@@ -73,22 +73,22 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Selected IDP is - extIdpData.extIdp",
+					"logMessage": "extIdpData.extIdp",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": -1056.247164675959,
-				"y": -7.7015929690797975
+				"y": -9.034926302413112
 			},
 			"dragging": false
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-d888a962-d3a5-4043-ae5a-7a1eb1705a53",
 			"position": {
 				"x": -464.4946654205345,
@@ -124,9 +124,9 @@
 					"hasNoRepeat": false,
 					"hasRepeat": false
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": -464.4946654205345,
 				"y": 1.2742188227360316
