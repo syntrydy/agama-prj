@@ -3,43 +3,91 @@
 		{
 			"width": 170,
 			"height": 123,
-			"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
+			"id": "finish-5bb4ab0f-528f-4923-b18b-20ab9c42559a",
 			"position": {
-				"x": -168.3538378530423,
-				"y": 194.96507369758706
+				"x": 34.312828813624265,
+				"y": 193.63174036425374
 			},
 			"type": "finish",
 			"data": {
-				"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
+				"id": "finish-5bb4ab0f-528f-4923-b18b-20ab9c42559a",
 				"type": "Agama-finish-Flow",
-				"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+				"parentId": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
 				"whenCondition": "WhenFalse",
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"handles": [],
 				"position": {
-					"x": -168.3538378530423,
-					"y": 194.96507369758706
+					"x": 34.312828813624265,
+					"y": 193.63174036425374
 				},
 				"agamaData": {
-					"id": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
-					"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+					"id": "finish-5bb4ab0f-528f-4923-b18b-20ab9c42559a",
+					"parentId": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
 					"type": "Agama-finish-Flow",
 					"hasSuccess": false,
 					"hasFailure": false,
 					"hasComment": true,
-					"comment": "",
+					"comment": "Finish with uid",
 					"flowfilename": "",
-					"returnVariable": "{ userId: \"puja\", property1: \"value1\"}",
-					"finishMode": "withSuccess",
+					"returnVariable": "uid",
+					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				},
-				"skake": false
+				}
 			},
 			"selected": true,
+			"positionAbsolute": {
+				"x": 34.312828813624265,
+				"y": 193.63174036425374
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 123,
+			"id": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
+			"position": {
+				"x": -165.68717118637568,
+				"y": 194.96507369758706
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": -165.68717118637568,
+					"y": 194.96507369758706
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
+					"parentId": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
+					"type": "Agama-call-Node",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Create user if not present",
+					"javaClassName": "UserHelperService",
+					"javaMethodName": "exec",
+					"javaVariableName": "",
+					"exceptionVariableField": "ex",
+					"callType": "Call static method",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"arguments": [
+						"\"puja\""
+					],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "uid"
+				}
+			},
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": -168.3538378530423,
+				"x": -165.68717118637568,
 				"y": 194.96507369758706
 			}
 		},
@@ -893,10 +941,27 @@
 			}
 		},
 		{
-			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a-finish-dfdc11cb-a1cd-448d-980e-384d8ced8107-68393558-ef62-4b43-add6-3b93a74f1f09",
+			"id": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a-Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6-c1d43703-2c14-4b80-8a37-bec113550976",
 			"type": "default",
 			"source": "Agama-log-Node-2a572b1a-87c7-4239-b54a-dde866b6680a",
-			"target": "finish-dfdc11cb-a1cd-448d-980e-384d8ced8107",
+			"target": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6-finish-5bb4ab0f-528f-4923-b18b-20ab9c42559a-8898256a-0b1a-4933-9781-1c200ede7cbf",
+			"type": "default",
+			"source": "Agama-call-Node-e6571e71-5800-4622-a15a-442a281730b6",
+			"target": "finish-5bb4ab0f-528f-4923-b18b-20ab9c42559a",
 			"label": "",
 			"labelBgPadding": [
 				8,
