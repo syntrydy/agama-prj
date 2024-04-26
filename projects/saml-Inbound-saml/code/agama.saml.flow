@@ -25,5 +25,5 @@ Log "@info " idpData.idpUrl
 samlResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " samlResponse
-it_fystl = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_fystl
+it_ppfsg = {success:true, data: { userId: "puja", property1: "value1"}}
+Finish it_ppfsg
