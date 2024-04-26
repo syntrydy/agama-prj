@@ -25,5 +25,7 @@ Log "@info " idpData.idpUrl
 samlResponse = RFAC idpData.idpUrl
 // Log external IDP result
 Log "@info " samlResponse
-it_ppfsg = {success:true, data: { userId: "puja", property1: "value1"}}
-Finish it_ppfsg
+// Create user if not present
+uid | ex = Call UserHelperService#exec "puja"
+// Finish with uid
+Finish uid
